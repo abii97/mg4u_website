@@ -10,7 +10,7 @@ const logos = [
 
 export default function TrustedBySection() {
   return (
-    <section className="bg-zinc-950 py-24 px-6">
+    <section className="bg-surface-base py-section-y px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,8 +19,8 @@ export default function TrustedBySection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <h2 className="text-4xl font-bold mb-4">Trusted where there&rsquo;s no room for error</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <h2 className="text-4xl font-bold mb-4 text-text-primary">Trusted where there&rsquo;s no room for error</h2>
+          <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
             We work with organisations that carry public trust, regulatory scrutiny and community
             expectations—alongside ambitious new‑age brands rewriting their categories.
           </p>
@@ -40,7 +40,7 @@ export default function TrustedBySection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="text-xl md:text-2xl font-bold text-gray-500 hover:text-gray-300 transition-colors cursor-default"
+              className="text-xl md:text-2xl font-bold text-text-secondary hover:text-primary transition-colors duration-fast cursor-default"
             >
               {logo}
             </motion.span>
@@ -52,7 +52,7 @@ export default function TrustedBySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed italic"
+          className="text-center text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed italic"
         >
           If your work is too important to be reduced to &ldquo;just another campaign&rdquo;, we should talk.
         </motion.p>

@@ -74,17 +74,17 @@ const pillars = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen py-24 px-6">
+    <div className="min-h-screen py-section-y px-6">
       <div className="max-w-6xl mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-5xl font-bold text-center mb-4"
+          className="text-4xl font-bold text-center mb-4 text-text-primary"
         >
           Our Services
         </motion.h1>
-        <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto text-lg leading-relaxed">
+        <p className="text-text-secondary text-center mb-16 max-w-2xl mx-auto text-lg leading-relaxed">
           Four pillars designed for a world where a tweet, reel or review can move markets.
           We specialise in mission‑critical communication and creator work where trust, compliance and speed matter as much as views.
         </p>
@@ -97,15 +97,15 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 lg:p-8"
+              className="bg-surface-alt border border-gray-100 rounded-md p-6 lg:p-8 shadow-1"
             >
-              <span className="text-xs font-mono text-purple-400 tracking-wider">{num}</span>
-              <h3 className="text-xl font-bold mt-2 mb-5">{title}</h3>
+              <span className="text-xs font-mono text-primary tracking-wider font-semibold">{num}</span>
+              <h3 className="text-xl font-bold mt-2 mb-5 text-text-primary">{title}</h3>
               <ul className="space-y-5">
                 {items.map(({ heading, desc }) => (
                   <li key={heading}>
-                    <h4 className="text-sm font-semibold text-white mb-1">{heading}</h4>
-                    <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>
+                    <h4 className="text-sm font-semibold text-text-primary mb-1">{heading}</h4>
+                    <p className="text-sm text-text-secondary leading-relaxed">{desc}</p>
                   </li>
                 ))}
               </ul>

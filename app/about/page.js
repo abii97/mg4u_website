@@ -72,17 +72,17 @@ const processSteps = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen py-24 px-6">
+    <div className="min-h-screen py-section-y px-6">
       <div className="max-w-6xl mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-5xl font-bold text-center mb-4"
+          className="text-4xl font-bold text-center mb-4 text-text-primary"
         >
           About Us
         </motion.h1>
-        <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto text-lg leading-relaxed">
+        <p className="text-text-secondary text-center mb-16 max-w-2xl mx-auto text-lg leading-relaxed">
           We are a global communications and creator‑led growth agency with deep India &amp; APAC roots—helping
           brands, institutions and governments manage reputation, navigate crises, and scale content across
           languages and platforms. From sustainability and CSR storytelling to meme‑driven creator campaigns and
@@ -97,8 +97,8 @@ export default function AboutPage() {
           transition={{ duration: 0.5 }}
           className="mb-20"
         >
-          <h2 className="text-3xl font-bold text-center mb-4">Who we partner with</h2>
-          <p className="text-gray-400 text-center mb-10 max-w-2xl mx-auto leading-relaxed">
+          <h2 className="text-3xl font-bold text-center mb-4 text-text-primary">Who we partner with</h2>
+          <p className="text-text-secondary text-center mb-10 max-w-2xl mx-auto leading-relaxed">
             We specialise in mission‑critical communication and creator work where trust, compliance and speed
             matter as much as views.
           </p>
@@ -110,10 +110,10 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="bg-zinc-900 border border-zinc-800 p-6 rounded-xl"
+                className="bg-surface-alt border border-gray-100 p-6 rounded-md shadow-1"
               >
-                <h3 className="text-base font-semibold mb-2 text-white">{label}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>
+                <h3 className="text-base font-semibold mb-2 text-text-primary">{label}</h3>
+                <p className="text-sm text-text-secondary leading-relaxed">{desc}</p>
               </motion.div>
             ))}
           </div>
@@ -127,8 +127,8 @@ export default function AboutPage() {
           transition={{ duration: 0.5 }}
           className="mb-20"
         >
-          <h2 className="text-3xl font-bold text-center mb-4">Why teams like yours call us</h2>
-          <p className="text-gray-400 text-center mb-10 max-w-2xl mx-auto leading-relaxed">
+          <h2 className="text-3xl font-bold text-center mb-4 text-text-primary">Why teams like yours call us</h2>
+          <p className="text-text-secondary text-center mb-10 max-w-2xl mx-auto leading-relaxed">
             In a world where a single tweet, reel or review can move markets, you need a team that understands
             your sector, your audience and your stakes.
           </p>
@@ -140,10 +140,10 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="bg-zinc-900 border border-zinc-800 p-6 rounded-xl"
+                className="bg-surface-alt border border-gray-100 p-6 rounded-md shadow-1"
               >
-                <h3 className="text-base font-semibold mb-2">{title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>
+                <h3 className="text-base font-semibold mb-2 text-text-primary">{title}</h3>
+                <p className="text-sm text-text-secondary leading-relaxed">{desc}</p>
               </motion.div>
             ))}
           </div>
@@ -157,8 +157,8 @@ export default function AboutPage() {
           transition={{ duration: 0.5 }}
           className="mb-20"
         >
-          <h2 className="text-3xl font-bold text-center mb-4">How we work when stakes are high</h2>
-          <p className="text-gray-400 text-center mb-10 max-w-2xl mx-auto leading-relaxed">
+          <h2 className="text-3xl font-bold text-center mb-4 text-text-primary">How we work when stakes are high</h2>
+          <p className="text-text-secondary text-center mb-10 max-w-2xl mx-auto leading-relaxed">
             A process designed for sensitive sectors, fast‑moving platforms and multi‑stakeholder environments.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -169,11 +169,11 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="bg-zinc-900 border border-zinc-800 p-6 rounded-xl flex flex-col gap-3"
+                className="bg-surface-alt border border-gray-100 p-6 rounded-md flex flex-col gap-3 shadow-1"
               >
-                <span className="text-xs font-mono text-purple-400 tracking-wider">{num}</span>
-                <h3 className="text-base font-semibold">{title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>
+                <span className="text-xs font-mono text-primary tracking-wider font-semibold">{num}</span>
+                <h3 className="text-base font-semibold text-text-primary">{title}</h3>
+                <p className="text-sm text-text-secondary leading-relaxed">{desc}</p>
               </motion.div>
             ))}
           </div>

@@ -15,18 +15,18 @@ const services = [
 
 export default function ServicesPreview() {
   return (
-    <section className="bg-zinc-950 py-24 px-6">
+    <section className="bg-surface-base py-section-y px-6">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center mb-4"
+          className="text-4xl font-bold text-center mb-4 text-text-primary"
         >
           Our Services
         </motion.h2>
-        <p className="text-gray-400 text-center mb-12 max-w-xl mx-auto">
+        <p className="text-text-secondary text-center mb-12 max-w-xl mx-auto">
           End-to-end influence engineering for D2C, SaaS, and global brands
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -38,10 +38,10 @@ export default function ServicesPreview() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
               whileHover={{ scale: 1.03 }}
-              className="bg-zinc-900 border border-zinc-800 p-6 rounded-xl hover:border-purple-500/30 transition-colors"
+              className="bg-surface-alt border border-gray-100 p-6 rounded-md hover:border-primary/30 transition-colors duration-fast shadow-1"
             >
-              <h3 className="text-lg font-semibold mb-2">{title}</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>
+              <h3 className="text-lg font-semibold mb-2 text-text-primary">{title}</h3>
+              <p className="text-sm text-text-secondary leading-relaxed">{desc}</p>
             </motion.div>
           ))}
         </div>

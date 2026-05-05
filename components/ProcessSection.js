@@ -11,7 +11,7 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="bg-zinc-950 py-24 px-6">
+    <section className="bg-surface-base py-section-y px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -20,8 +20,8 @@ export default function ProcessSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <h2 className="text-4xl font-bold mb-4">How we work when stakes are high</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <h2 className="text-4xl font-bold mb-4 text-text-primary">How we work when stakes are high</h2>
+          <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
             A process designed for sensitive sectors, fast‑moving platforms and multi‑stakeholder environments.
           </p>
         </motion.div>
@@ -35,10 +35,10 @@ export default function ProcessSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
               whileHover={{ scale: 1.03 }}
-              className="bg-zinc-900 border border-zinc-800 p-6 rounded-xl flex flex-col gap-3"
+              className="bg-surface-alt border border-gray-100 p-6 rounded-md flex flex-col gap-3 shadow-1"
             >
-              <span className="text-xs font-mono text-purple-400 tracking-wider">{num}</span>
-              <h3 className="text-base font-semibold">{title}</h3>
+              <span className="text-xs font-mono text-primary tracking-wider font-semibold">{num}</span>
+              <h3 className="text-base font-semibold text-text-primary">{title}</h3>
             </motion.div>
           ))}
         </div>
@@ -52,7 +52,7 @@ export default function ProcessSection() {
         >
           <Link
             href="/about"
-            className="inline-flex items-center gap-2 text-sm text-purple-400 hover:text-purple-300 transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary-hover transition-colors duration-fast font-medium"
           >
             Learn about our process
             <span className="text-lg">&rarr;</span>

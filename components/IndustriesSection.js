@@ -13,7 +13,7 @@ const industries = [
 
 export default function IndustriesSection() {
   return (
-    <section className="bg-zinc-900 py-24 px-6">
+    <section className="bg-surface-alt py-section-y px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,8 +22,8 @@ export default function IndustriesSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <h2 className="text-4xl font-bold mb-4">Who we partner with</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <h2 className="text-4xl font-bold mb-4 text-text-primary">Who we partner with</h2>
+          <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
             We specialise in mission‑critical communication and creator work where trust, compliance and speed
             matter as much as views.
           </p>
@@ -37,8 +37,8 @@ export default function IndustriesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              whileHover={{ scale: 1.03, borderColor: 'rgba(168,85,247,0.3)' }}
-              className="bg-zinc-950 border border-zinc-800 px-5 py-3 rounded-xl text-sm font-medium text-gray-300 transition-all"
+              whileHover={{ scale: 1.03, borderColor: '#0B72FF' }}
+              className="bg-surface-base border border-gray-200 px-5 py-3 rounded-md text-sm font-medium text-text-primary transition-all shadow-1"
             >
               {label}
             </motion.span>
@@ -54,7 +54,7 @@ export default function IndustriesSection() {
         >
           <Link
             href="/about"
-            className="inline-flex items-center gap-2 text-sm text-purple-400 hover:text-purple-300 transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary-hover transition-colors duration-fast font-medium"
           >
             Learn more about our industry expertise
             <span className="text-lg">&rarr;</span>

@@ -10,7 +10,7 @@ const reasons = [
 
 export default function WhyUsSection() {
   return (
-    <section className="bg-zinc-900 py-24 px-6">
+    <section className="bg-surface-alt py-section-y px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,7 +19,7 @@ export default function WhyUsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <h2 className="text-4xl font-bold mb-4">Why teams like yours call us</h2>
+          <h2 className="text-4xl font-bold mb-4 text-text-primary">Why teams like yours call us</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
@@ -30,10 +30,10 @@ export default function WhyUsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              whileHover={{ scale: 1.02, borderColor: 'rgba(168,85,247,0.3)' }}
-              className="bg-zinc-950 border border-zinc-800 p-6 rounded-xl transition-all text-center"
+              whileHover={{ scale: 1.02, borderColor: '#0B72FF' }}
+              className="bg-surface-base border border-gray-100 p-6 rounded-md transition-all text-center shadow-1"
             >
-              <h3 className="text-base font-semibold">{title}</h3>
+              <h3 className="text-base font-semibold text-text-primary">{title}</h3>
             </motion.div>
           ))}
         </div>
@@ -47,7 +47,7 @@ export default function WhyUsSection() {
         >
           <Link
             href="/about"
-            className="inline-flex items-center gap-2 text-sm text-purple-400 hover:text-purple-300 transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary-hover transition-colors duration-fast font-medium"
           >
             More about us
             <span className="text-lg">&rarr;</span>

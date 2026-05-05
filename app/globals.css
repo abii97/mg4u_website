@@ -1,3 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #0B72FF;
+    --color-primary-hover: #095cd6;
+    --color-text-primary: #111111;
+    --color-text-secondary: #555555;
+    --color-surface-base: #ffffff;
+    --color-surface-alt: #f7f7f7;
+    --color-surface-dark: #000000;
+    --color-text-inverse: #ffffff;
+
+    --font-primary: 'Inter', sans-serif;
+    --font-size-base: 18px;
+    --line-height-base: 26px;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --shadow-1: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --shadow-2: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+    --motion-fast: 200ms;
+    --motion-base: 300ms;
+  }
+
+  html {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-text-primary);
+    background-color: var(--color-surface-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}

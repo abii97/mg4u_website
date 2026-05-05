@@ -51,17 +51,17 @@ const caseStudies = [
 
 export default function CaseStudiesPage() {
   return (
-    <div className="min-h-screen py-24 px-6">
+    <div className="min-h-screen py-section-y px-6">
       <div className="max-w-6xl mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-5xl font-bold text-center mb-4"
+          className="text-4xl font-bold text-center mb-4 text-text-primary"
         >
           Case Studies
         </motion.h1>
-        <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto text-lg leading-relaxed">
+        <p className="text-text-secondary text-center mb-16 max-w-2xl mx-auto text-lg leading-relaxed">
           We&rsquo;re often called when stakes are high—regulated industries, public institutions,
           fast‑scaling D2C, and government or impact campaigns.
         </p>
@@ -73,35 +73,35 @@ export default function CaseStudiesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden flex flex-col"
+              className="bg-surface-alt border border-gray-100 rounded-md overflow-hidden flex flex-col shadow-1"
             >
               <div className="p-6 flex flex-col gap-4 flex-1">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-purple-400 uppercase tracking-wider">{category}</span>
-                  <span className="text-sm font-semibold text-purple-400">{company}</span>
+                  <span className="text-xs text-primary uppercase tracking-wider font-semibold">{category}</span>
+                  <span className="text-sm font-semibold text-primary">{company}</span>
                 </div>
-                <h3 className="text-xl font-semibold">{title}</h3>
+                <h3 className="text-xl font-semibold text-text-primary">{title}</h3>
                 <div className="space-y-3 text-sm">
                   <div>
-                    <p className="text-gray-500 text-xs uppercase mb-1">Challenge</p>
-                    <p className="text-gray-400 leading-relaxed">{challenge}</p>
+                    <p className="text-text-secondary text-xs uppercase mb-1 font-semibold">Challenge</p>
+                    <p className="text-text-secondary leading-relaxed">{challenge}</p>
                   </div>
                   <div>
-                    <p className="text-gray-500 text-xs uppercase mb-1">Solution</p>
-                    <p className="text-gray-400 leading-relaxed">{solution}</p>
+                    <p className="text-text-secondary text-xs uppercase mb-1 font-semibold">Solution</p>
+                    <p className="text-text-secondary leading-relaxed">{solution}</p>
                   </div>
                   <div>
-                    <p className="text-gray-500 text-xs uppercase mb-1">Result</p>
-                    <p className="text-gray-300 leading-relaxed">{result}</p>
+                    <p className="text-text-secondary text-xs uppercase mb-1 font-semibold">Result</p>
+                    <p className="text-text-primary leading-relaxed">{result}</p>
                   </div>
                 </div>
-                <div className="grid grid-cols-4 gap-3 mt-auto pt-4 border-t border-zinc-800">
+                <div className="grid grid-cols-4 gap-3 mt-auto pt-4 border-t border-gray-200">
                   {Object.entries(stats).map(([key, val]) => (
                     <div key={key} className="text-center">
-                      <p className="text-lg font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                      <p className="text-lg font-bold text-primary">
                         {val}
                       </p>
-                      <p className="text-[10px] text-gray-500 uppercase">{key}</p>
+                      <p className="text-[10px] text-text-secondary uppercase">{key}</p>
                     </div>
                   ))}
                 </div>
