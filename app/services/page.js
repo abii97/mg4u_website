@@ -1,51 +1,74 @@
 'use client'
 import { motion } from 'framer-motion'
 
-const services = [
+const pillars = [
   {
-    title: 'Influencer Marketing',
-    desc: 'End-to-end influencer campaign management with data-driven creator selection, contract negotiation, and performance tracking.',
-    bullets: ['Vetted creator network', 'Performance-based pricing', 'Real-time dashboards'],
+    num: '01',
+    title: 'Reputation, Crisis & Sustainability Communication',
+    items: [
+      {
+        heading: 'Crisis desks & reputation management',
+        desc: 'Real‑time listening, rapid issue response and narrative repair across LinkedIn, X, Instagram, review sites and search—built for brands, institutions and public figures that can&rsquo;t afford missteps.',
+      },
+      {
+        heading: 'Sustainability & CSR storytelling',
+        desc: 'We turn CSR and ESG work into authentic stories—films, reports, campaigns and creator collaborations—that stand up to stakeholder scrutiny and resonate with communities.',
+      },
+      {
+        heading: 'Search‑result & knowledge authority',
+        desc: 'Strategic content, profiles and knowledge‑panel‑friendly assets that improve what appears when someone searches your brand or leadership, including discreet support around encyclopaedic and high‑authority web properties.',
+      },
+    ],
   },
   {
-    title: 'UGC Content',
-    desc: 'Scalable user-generated content production that fuels your paid ads, organic social, and product pages.',
-    bullets: ['60+ content formats', 'Conversion-optimized scripts', 'Rights-managed delivery'],
+    num: '02',
+    title: 'Creator & Meme‑Led Campaigns',
+    items: [
+      {
+        heading: 'Influencer & regional creator programs',
+        desc: 'Full‑funnel campaigns using national and regional creators across India and APAC, with vernacular storytelling that drives real action—not just impressions.',
+      },
+      {
+        heading: 'UGC and content at scale (1000+ videos)',
+        desc: 'Structured pipelines for scripting, producing and quality‑controlling hundreds of short‑form videos for launches, D2C funnels, apps and citizen initiatives.',
+      },
+      {
+        heading: 'Meme marketing & content seeding',
+        desc: 'Culture‑aware meme narratives, comment seeding and community conversations that place your message organically in the timelines and comment sections that matter.',
+      },
+      {
+        heading: 'Hashtag & moment amplification',
+        desc: 'Planned trend‑hijacks and hashtag pushes around key moments—product drops, announcements, events and campaigns—stacked on top of solid, always‑on communication.',
+      },
+    ],
   },
   {
-    title: 'Paid Ads',
-    desc: 'Full-funnel paid media management across Meta, TikTok, YouTube, and Google with creative testing frameworks.',
-    bullets: ['Creative testing at scale', 'Audience segmentation', 'ROAS optimization'],
+    num: '03',
+    title: 'WhatsApp, SMS & Full‑Stack Communication',
+    items: [
+      {
+        heading: 'WhatsApp & SMS marketing',
+        desc: 'Flows for D2C, institutions and services—from cart recovery and admission journeys to appointment reminders and crisis updates—leveraging WhatsApp&rsquo;s 90%+ open rates in India and APAC.',
+      },
+      {
+        heading: 'Community, email & stakeholder communication',
+        desc: 'Integrated calendars for parents, patients, students, employees and investors so each group gets the right information, in the right tone, on the right channel.',
+      },
+    ],
   },
   {
-    title: 'Social Media Management',
-    desc: 'Strategy-led social media management including content calendar, community management, and analytics.',
-    bullets: ['Monthly content strategy', 'Community engagement', 'Performance reports'],
-  },
-  {
-    title: 'Branding',
-    desc: 'Building distinctive brand identities with positioning strategy, visual design, and messaging frameworks.',
-    bullets: ['Brand positioning', 'Visual identity', 'Messaging playbook'],
-  },
-  {
-    title: 'Crisis Management',
-    desc: 'Proactive reputation management and rapid-response protocols to handle brand crises effectively.',
-    bullets: ['24/7 monitoring', 'Response playbooks', 'Sentiment recovery'],
-  },
-  {
-    title: 'Twitter Trending',
-    desc: 'Strategic campaigns to dominate Twitter/X trending topics through coordinated creator amplification.',
-    bullets: ['Trend hijacking', 'Creator amplification', 'Hashtag strategy'],
-  },
-  {
-    title: 'Social Media Amplification',
-    desc: 'Cross-platform content amplification strategies to maximize reach and engagement for every post.',
-    bullets: ['Platform optimization', 'Boosting strategies', 'Viral frameworks'],
-  },
-  {
-    title: 'Content Management',
-    desc: 'End-to-end content operations including planning, production, publishing, and performance analysis.',
-    bullets: ['Content calendars', 'Production pipelines', 'Analytics dashboards'],
+    num: '04',
+    title: 'On‑Ground, Events & Digital Foundations',
+    items: [
+      {
+        heading: 'On‑ground activations & events',
+        desc: 'Bloggers&rsquo; meets, creator summits, campus activations and hospital/community events that tie seamlessly into your digital, PR and CSR narratives.',
+      },
+      {
+        heading: 'Websites & content for high‑trust sectors',
+        desc: 'Content writing, UX and HubSpot‑based builds for corporate, product and CSR sites—engineered for clarity, compliance and conversion across India, APAC and global audiences.',
+      },
+    ],
   },
 ]
 
@@ -61,26 +84,28 @@ export default function ServicesPage() {
         >
           Our Services
         </motion.h1>
-        <p className="text-gray-400 text-center mb-16 max-w-xl mx-auto">
-          Full-stack influence engineering for brands that demand ROI
+        <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto text-lg leading-relaxed">
+          Four pillars designed for a world where a tweet, reel or review can move markets.
+          We specialise in mission‑critical communication and creator work where trust, compliance and speed matter as much as views.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map(({ title, desc, bullets }, i) => (
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {pillars.map(({ num, title, items }, i) => (
             <motion.div
-              key={title}
+              key={num}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 flex flex-col gap-4"
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 lg:p-8"
             >
-              <h3 className="text-xl font-semibold">{title}</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>
-              <ul className="space-y-1">
-                {bullets.map((b) => (
-                  <li key={b} className="text-xs text-gray-500 flex items-center gap-2">
-                    <span className="w-1 h-1 rounded-full bg-purple-500 shrink-0" />
-                    {b}
+              <span className="text-xs font-mono text-purple-400 tracking-wider">{num}</span>
+              <h3 className="text-xl font-bold mt-2 mb-5">{title}</h3>
+              <ul className="space-y-5">
+                {items.map(({ heading, desc }) => (
+                  <li key={heading}>
+                    <h4 className="text-sm font-semibold text-white mb-1">{heading}</h4>
+                    <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>
                   </li>
                 ))}
               </ul>

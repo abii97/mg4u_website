@@ -1,75 +1,80 @@
 'use client'
 import { motion } from 'framer-motion'
 
-const floatingCards = [
-  { label: '250+', sub: 'Campaigns', delay: 0 },
-  { label: '10K+', sub: 'Creators', delay: 0.3 },
-  { label: '3.5x', sub: 'Avg ROAS', delay: 0.6 },
-]
-
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-zinc-950">
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[600px] h-[600px] rounded-full bg-gradient-to-br from-purple-500/20 to-blue-500/20 blur-3xl" />
+        <div className="w-[700px] h-[700px] rounded-full bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-transparent blur-3xl" />
       </div>
-
-      {floatingCards.map((card, i) => (
-        <motion.div
-          key={card.label}
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: [0, -15, 0] }}
-          transition={{
-            opacity: { duration: 0.8, delay: card.delay + 0.5 },
-            y: { repeat: Infinity, duration: 6, delay: card.delay, ease: 'easeInOut' },
-          }}
-          className="absolute hidden md:block bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 rounded-xl px-5 py-3"
-          style={{
-            top: i === 0 ? '15%' : i === 1 ? '75%' : '20%',
-            left: i === 0 ? '10%' : i === 1 ? '75%' : undefined,
-            right: i === 2 ? '10%' : undefined,
-          }}
-        >
-          <p className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-            {card.label}
-          </p>
-          <p className="text-xs text-gray-400">{card.sub}</p>
-        </motion.div>
-      ))}
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-purple-500/5 blur-2xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-blue-500/5 blur-2xl" />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="relative z-10 text-center max-w-3xl px-6"
+        transition={{ duration: 1, ease: 'easeOut' }}
+        className="relative z-10 text-center max-w-4xl px-6 py-24"
       >
-        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
-          We Engineer Influence{' '}
-          <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
-            That Converts
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-8"
+        >
+          Reputation, creators and communication that{' '}
+          <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            stand up to real‑world scrutiny.
           </span>
-        </h1>
-        <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-xl mx-auto">
-          Scaling D2C, SaaS, and global brands through performance-driven influencer campaigns
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed"
+        >
+          We are a global communications and creator‑led growth agency with deep India &amp; APAC roots—helping
+          brands, institutions and governments manage reputation, navigate crises, and scale content across
+          languages and platforms. From sustainability and CSR storytelling to meme‑driven creator campaigns and
+          always‑on crisis desks, we design narratives people trust and remember.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
+        >
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            href="https://wa.me/your-number"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-base transition-shadow hover:shadow-lg hover:shadow-purple-500/20"
+          >
+            Chat with us on WhatsApp
+          </motion.a>
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             href="/contact"
-            className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold"
+            className="border border-zinc-700 text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-zinc-800 hover:border-zinc-600 transition-all"
           >
-            Get Campaign Plan
+            Submit a brief or query
           </motion.a>
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            href="/case-studies"
-            className="border border-zinc-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-zinc-800 transition-colors"
-          >
-            View Case Studies
-          </motion.a>
-        </div>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+          className="text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed"
+        >
+          Trusted by leaders like ideaForge, Emcure, Kaya, Just Herbs and high‑stakes institutions across
+          healthcare, education, government and consumer services.
+        </motion.p>
       </motion.div>
     </section>
   )

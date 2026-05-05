@@ -1,21 +1,21 @@
 import Hero from '../components/Hero'
-import ProblemSection from '../components/ProblemSection'
-import ServicesPreview from '../components/ServicesPreview'
-import CaseStudiesPreview from '../components/CaseStudiesPreview'
+import IndustriesSection from '../components/IndustriesSection'
+import ServicesSection from '../components/ServicesSection'
+import CaseStudiesSection from '../components/CaseStudiesSection'
 import ProcessSection from '../components/ProcessSection'
-import Testimonials from '../components/Testimonials'
-import CTASection from '../components/CTASection'
+import WhyUsSection from '../components/WhyUsSection'
+import TrustedBySection from '../components/TrustedBySection'
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <ProblemSection />
-      <ServicesPreview />
-      <CaseStudiesPreview />
+      <IndustriesSection />
+      <ServicesSection />
+      <CaseStudiesSection />
       <ProcessSection />
-      <Testimonials />
-      <CTASection />
+      <WhyUsSection />
+      <TrustedBySection />
     </>
   )
 }

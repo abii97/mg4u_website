@@ -2,16 +2,18 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
-const steps = [
-  { num: '01', title: 'Listen & map risk vs. opportunity' },
-  { num: '02', title: 'Design the narrative & guardrails' },
-  { num: '03', title: 'Build creator & communication engines' },
-  { num: '04', title: 'Monitor, optimise & protect' },
+const industries = [
+  'D2C & Consumer Brands',
+  'Healthcare, Pharma & Hospitals',
+  'Schools, Colleges & Universities',
+  'Government, Public Sector & Impact',
+  'New‑Age & On‑Demand Services',
+  'B2B Tech & Industrial',
 ]
 
-export default function ProcessSection() {
+export default function IndustriesSection() {
   return (
-    <section className="bg-zinc-950 py-24 px-6">
+    <section className="bg-zinc-900 py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -20,26 +22,26 @@ export default function ProcessSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <h2 className="text-4xl font-bold mb-4">How we work when stakes are high</h2>
+          <h2 className="text-4xl font-bold mb-4">Who we partner with</h2>
           <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            A process designed for sensitive sectors, fast‑moving platforms and multi‑stakeholder environments.
+            We specialise in mission‑critical communication and creator work where trust, compliance and speed
+            matter as much as views.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
-          {steps.map(({ num, title }, i) => (
-            <motion.div
-              key={num}
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
+          {industries.map((label, i) => (
+            <motion.span
+              key={label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              whileHover={{ scale: 1.03 }}
-              className="bg-zinc-900 border border-zinc-800 p-6 rounded-xl flex flex-col gap-3"
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              whileHover={{ scale: 1.03, borderColor: 'rgba(168,85,247,0.3)' }}
+              className="bg-zinc-950 border border-zinc-800 px-5 py-3 rounded-xl text-sm font-medium text-gray-300 transition-all"
             >
-              <span className="text-xs font-mono text-purple-400 tracking-wider">{num}</span>
-              <h3 className="text-base font-semibold">{title}</h3>
-            </motion.div>
+              {label}
+            </motion.span>
           ))}
         </div>
 
@@ -54,7 +56,7 @@ export default function ProcessSection() {
             href="/about"
             className="inline-flex items-center gap-2 text-sm text-purple-400 hover:text-purple-300 transition-colors"
           >
-            Learn about our process
+            Learn more about our industry expertise
             <span className="text-lg">&rarr;</span>
           </Link>
         </motion.div>

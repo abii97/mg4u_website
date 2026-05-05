@@ -1,0 +1,1292 @@
+{
+  "edges": [
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "app_layout",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/layout.js",
+      "target": "___components_navbar"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "app_layout",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/layout.js",
+      "target": "___components_footer"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "app_layout",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/layout.js",
+      "target": "app_layout::RootLayout"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "contact_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/contact/page.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "contact_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/contact/page.js",
+      "target": "react"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "contact_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/contact/page.js",
+      "target": "contact_page::ContactPage"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "contact_page::ContactPage",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/contact/page.js",
+      "target": "usestate"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "contact_page::ContactPage",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/contact/page.js",
+      "target": "preventdefault"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "contact_page::ContactPage",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/contact/page.js",
+      "target": "setsubmitted"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "app_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "target": "___components_hero"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "app_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "target": "___components_industriessection"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "app_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "target": "___components_servicessection"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "app_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "target": "___components_casestudiessection"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "app_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "target": "___components_processsection"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "app_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "target": "___components_whyussection"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "app_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "target": "___components_trustedbysection"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "app_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "target": "app_page::HomePage"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "about_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/about/page.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "about_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/about/page.js",
+      "target": "about_page::AboutPage"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "about_page::AboutPage",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/about/page.js",
+      "target": "map"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "about_page::AboutPage",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/about/page.js",
+      "target": "map"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "case-studies_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/case-studies/page.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "case-studies_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/case-studies/page.js",
+      "target": "case-studies_page::CaseStudiesPage"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "case-studies_page::CaseStudiesPage",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/case-studies/page.js",
+      "target": "map"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "case-studies_page::CaseStudiesPage",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/case-studies/page.js",
+      "target": "map"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "case-studies_page::CaseStudiesPage",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/case-studies/page.js",
+      "target": "entries"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "services_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/services/page.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "services_page",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/services/page.js",
+      "target": "services_page::ServicesPage"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "services_page::ServicesPage",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/services/page.js",
+      "target": "map"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "services_page::ServicesPage",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/services/page.js",
+      "target": "map"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "plugins_graphify",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/.opencode/plugins/graphify.js",
+      "target": "fs"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "plugins_graphify",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/.opencode/plugins/graphify.js",
+      "target": "path"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_WhyUsSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/WhyUsSection.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "components_WhyUsSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/WhyUsSection.js",
+      "target": "components_WhyUsSection::WhyUsSection"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_WhyUsSection::WhyUsSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/WhyUsSection.js",
+      "target": "map"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_ServicesSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ServicesSection.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "components_ServicesSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ServicesSection.js",
+      "target": "components_ServicesSection::ServicesSection"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_ServicesSection::ServicesSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ServicesSection.js",
+      "target": "map"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_ServicesSection::ServicesSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ServicesSection.js",
+      "target": "map"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_IndustriesSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/IndustriesSection.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "components_IndustriesSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/IndustriesSection.js",
+      "target": "components_IndustriesSection::IndustriesSection"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_IndustriesSection::IndustriesSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/IndustriesSection.js",
+      "target": "map"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_Navbar",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "target": "react"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_Navbar",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "target": "next_link"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_Navbar",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "components_Navbar",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "target": "components_Navbar::Navbar"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_Navbar::Navbar",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "target": "usestate"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_Navbar::Navbar",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "target": "useeffect"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_Navbar::Navbar",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "target": "setscrolled"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_Navbar::Navbar",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "target": "addeventlistener"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_Navbar::Navbar",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "target": "removeeventlistener"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_Navbar::Navbar",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "target": "map"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_Testimonials",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Testimonials.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "components_Testimonials",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Testimonials.js",
+      "target": "components_Testimonials::Testimonials"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_Testimonials::Testimonials",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Testimonials.js",
+      "target": "map"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_ServicesPreview",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ServicesPreview.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "components_ServicesPreview",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ServicesPreview.js",
+      "target": "components_ServicesPreview::ServicesPreview"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_ServicesPreview::ServicesPreview",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ServicesPreview.js",
+      "target": "map"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_ProblemSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ProblemSection.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "components_ProblemSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ProblemSection.js",
+      "target": "components_ProblemSection::ProblemSection"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_CaseStudiesSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CaseStudiesSection.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "components_CaseStudiesSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CaseStudiesSection.js",
+      "target": "components_CaseStudiesSection::CaseStudiesSection"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_CaseStudiesSection::CaseStudiesSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CaseStudiesSection.js",
+      "target": "map"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_ProcessSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ProcessSection.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "components_ProcessSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ProcessSection.js",
+      "target": "components_ProcessSection::ProcessSection"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_ProcessSection::ProcessSection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ProcessSection.js",
+      "target": "map"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_Hero",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Hero.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "components_Hero",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Hero.js",
+      "target": "components_Hero::Hero"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_TrustedBySection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/TrustedBySection.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "components_TrustedBySection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/TrustedBySection.js",
+      "target": "components_TrustedBySection::TrustedBySection"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_TrustedBySection::TrustedBySection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/TrustedBySection.js",
+      "target": "map"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_CaseStudiesPreview",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CaseStudiesPreview.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_CaseStudiesPreview",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CaseStudiesPreview.js",
+      "target": "next_link"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "components_CaseStudiesPreview",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CaseStudiesPreview.js",
+      "target": "components_CaseStudiesPreview::CaseStudiesPreview"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_CaseStudiesPreview::CaseStudiesPreview",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CaseStudiesPreview.js",
+      "target": "map"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_Footer",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Footer.js",
+      "target": "next_link"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "components_Footer",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Footer.js",
+      "target": "components_Footer::Footer"
+    },
+    {
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "relation": "calls",
+      "source": "components_Footer::Footer",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Footer.js",
+      "target": "getfullyear"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_CTASection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CTASection.js",
+      "target": "framer_motion"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "imports",
+      "source": "components_CTASection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CTASection.js",
+      "target": "next_link"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "components_CTASection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CTASection.js",
+      "target": "components_CTASection::CTASection"
+    },
+    {
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "relation": "contains",
+      "source": "mywebsite_AGENTS",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/AGENTS.md",
+      "target": "mywebsite_AGENTS::graphify"
+    }
+  ],
+  "nodes": [
+    {
+      "community": 57,
+      "docstring": null,
+      "file_type": "code",
+      "id": "mywebsite_tailwind.config",
+      "label": "tailwind.config.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/tailwind.config.js",
+      "source_line": null
+    },
+    {
+      "community": 13,
+      "docstring": null,
+      "file_type": "code",
+      "id": "app_layout",
+      "label": "layout.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/layout.js",
+      "source_line": null
+    },
+    {
+      "community": 13,
+      "docstring": null,
+      "file_type": "code",
+      "id": "app_layout::RootLayout",
+      "label": "RootLayout()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/layout.js",
+      "source_line": 9
+    },
+    {
+      "community": 13,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "___components_navbar",
+      "label": "___components_navbar",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/layout.js",
+      "source_line": null
+    },
+    {
+      "community": 13,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "___components_footer",
+      "label": "___components_footer",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/layout.js",
+      "source_line": null
+    },
+    {
+      "community": 62,
+      "docstring": null,
+      "file_type": "code",
+      "id": "contact_page",
+      "label": "page.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/contact/page.js",
+      "source_line": null
+    },
+    {
+      "community": 61,
+      "docstring": null,
+      "file_type": "code",
+      "id": "contact_page::ContactPage",
+      "label": "ContactPage()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/contact/page.js",
+      "source_line": 4
+    },
+    {
+      "community": 50,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "framer_motion",
+      "label": "framer_motion",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/contact/page.js",
+      "source_line": null
+    },
+    {
+      "community": 62,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "react",
+      "label": "react",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/contact/page.js",
+      "source_line": null
+    },
+    {
+      "community": 61,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "usestate",
+      "label": "usestate",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/contact/page.js",
+      "source_line": null
+    },
+    {
+      "community": 61,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "preventdefault",
+      "label": "preventdefault",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/contact/page.js",
+      "source_line": null
+    },
+    {
+      "community": 61,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "setsubmitted",
+      "label": "setsubmitted",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/contact/page.js",
+      "source_line": null
+    },
+    {
+      "community": 15,
+      "docstring": null,
+      "file_type": "code",
+      "id": "app_page",
+      "label": "page.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "source_line": null
+    },
+    {
+      "community": 15,
+      "docstring": null,
+      "file_type": "code",
+      "id": "app_page::HomePage",
+      "label": "HomePage()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "source_line": 8
+    },
+    {
+      "community": 15,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "___components_hero",
+      "label": "___components_hero",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "source_line": null
+    },
+    {
+      "community": 15,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "___components_industriessection",
+      "label": "___components_industriessection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "source_line": null
+    },
+    {
+      "community": 15,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "___components_servicessection",
+      "label": "___components_servicessection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "source_line": null
+    },
+    {
+      "community": 15,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "___components_casestudiessection",
+      "label": "___components_casestudiessection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "source_line": null
+    },
+    {
+      "community": 15,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "___components_processsection",
+      "label": "___components_processsection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "source_line": null
+    },
+    {
+      "community": 15,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "___components_whyussection",
+      "label": "___components_whyussection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "source_line": null
+    },
+    {
+      "community": 15,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "___components_trustedbysection",
+      "label": "___components_trustedbysection",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/page.js",
+      "source_line": null
+    },
+    {
+      "community": 50,
+      "docstring": null,
+      "file_type": "code",
+      "id": "about_page",
+      "label": "page.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/about/page.js",
+      "source_line": null
+    },
+    {
+      "community": 53,
+      "docstring": null,
+      "file_type": "code",
+      "id": "about_page::AboutPage",
+      "label": "AboutPage()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/about/page.js",
+      "source_line": 17
+    },
+    {
+      "community": 53,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "map",
+      "label": "map",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/about/page.js",
+      "source_line": null
+    },
+    {
+      "community": 50,
+      "docstring": null,
+      "file_type": "code",
+      "id": "case-studies_page",
+      "label": "page.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/case-studies/page.js",
+      "source_line": null
+    },
+    {
+      "community": 53,
+      "docstring": null,
+      "file_type": "code",
+      "id": "case-studies_page::CaseStudiesPage",
+      "label": "CaseStudiesPage()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/case-studies/page.js",
+      "source_line": 60
+    },
+    {
+      "community": 53,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "entries",
+      "label": "entries",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/case-studies/page.js",
+      "source_line": null
+    },
+    {
+      "community": 12,
+      "docstring": null,
+      "file_type": "code",
+      "id": "app_globals",
+      "label": "globals.css",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/globals.css",
+      "source_line": null
+    },
+    {
+      "community": 50,
+      "docstring": null,
+      "file_type": "code",
+      "id": "services_page",
+      "label": "page.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/services/page.js",
+      "source_line": null
+    },
+    {
+      "community": 53,
+      "docstring": null,
+      "file_type": "code",
+      "id": "services_page::ServicesPage",
+      "label": "ServicesPage()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/app/services/page.js",
+      "source_line": 51
+    },
+    {
+      "community": 60,
+      "docstring": null,
+      "file_type": "code",
+      "id": "plugins_graphify",
+      "label": "graphify.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/.opencode/plugins/graphify.js",
+      "source_line": null
+    },
+    {
+      "community": 60,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "fs",
+      "label": "fs",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/.opencode/plugins/graphify.js",
+      "source_line": null
+    },
+    {
+      "community": 60,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "path",
+      "label": "path",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/.opencode/plugins/graphify.js",
+      "source_line": null
+    },
+    {
+      "community": 46,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_WhyUsSection",
+      "label": "WhyUsSection.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/WhyUsSection.js",
+      "source_line": null
+    },
+    {
+      "community": 46,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_WhyUsSection::WhyUsSection",
+      "label": "WhyUsSection()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/WhyUsSection.js",
+      "source_line": 22
+    },
+    {
+      "community": 53,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_ServicesSection",
+      "label": "ServicesSection.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ServicesSection.js",
+      "source_line": null
+    },
+    {
+      "community": 53,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_ServicesSection::ServicesSection",
+      "label": "ServicesSection()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ServicesSection.js",
+      "source_line": 74
+    },
+    {
+      "community": 30,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_IndustriesSection",
+      "label": "IndustriesSection.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/IndustriesSection.js",
+      "source_line": null
+    },
+    {
+      "community": 30,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_IndustriesSection::IndustriesSection",
+      "label": "IndustriesSection()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/IndustriesSection.js",
+      "source_line": 30
+    },
+    {
+      "community": 32,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_Navbar",
+      "label": "Navbar.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "source_line": null
+    },
+    {
+      "community": 32,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_Navbar::Navbar",
+      "label": "Navbar()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "source_line": 5
+    },
+    {
+      "community": 25,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "next_link",
+      "label": "next_link",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "source_line": null
+    },
+    {
+      "community": 32,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "useeffect",
+      "label": "useeffect",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "source_line": null
+    },
+    {
+      "community": 32,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "setscrolled",
+      "label": "setscrolled",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "source_line": null
+    },
+    {
+      "community": 32,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "addeventlistener",
+      "label": "addeventlistener",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "source_line": null
+    },
+    {
+      "community": 32,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "removeeventlistener",
+      "label": "removeeventlistener",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Navbar.js",
+      "source_line": null
+    },
+    {
+      "community": 50,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_Testimonials",
+      "label": "Testimonials.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Testimonials.js",
+      "source_line": null
+    },
+    {
+      "community": 50,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_Testimonials::Testimonials",
+      "label": "Testimonials()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Testimonials.js",
+      "source_line": 21
+    },
+    {
+      "community": 38,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_ServicesPreview",
+      "label": "ServicesPreview.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ServicesPreview.js",
+      "source_line": null
+    },
+    {
+      "community": 38,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_ServicesPreview::ServicesPreview",
+      "label": "ServicesPreview()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ServicesPreview.js",
+      "source_line": 15
+    },
+    {
+      "community": 34,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_ProblemSection",
+      "label": "ProblemSection.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ProblemSection.js",
+      "source_line": null
+    },
+    {
+      "community": 34,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_ProblemSection::ProblemSection",
+      "label": "ProblemSection()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ProblemSection.js",
+      "source_line": 3
+    },
+    {
+      "community": 50,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_CaseStudiesSection",
+      "label": "CaseStudiesSection.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CaseStudiesSection.js",
+      "source_line": null
+    },
+    {
+      "community": 53,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_CaseStudiesSection::CaseStudiesSection",
+      "label": "CaseStudiesSection()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CaseStudiesSection.js",
+      "source_line": 31
+    },
+    {
+      "community": 50,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_ProcessSection",
+      "label": "ProcessSection.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ProcessSection.js",
+      "source_line": null
+    },
+    {
+      "community": 53,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_ProcessSection::ProcessSection",
+      "label": "ProcessSection()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/ProcessSection.js",
+      "source_line": 26
+    },
+    {
+      "community": 50,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_Hero",
+      "label": "Hero.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Hero.js",
+      "source_line": null
+    },
+    {
+      "community": 50,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_Hero::Hero",
+      "label": "Hero()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Hero.js",
+      "source_line": 3
+    },
+    {
+      "community": 43,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_TrustedBySection",
+      "label": "TrustedBySection.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/TrustedBySection.js",
+      "source_line": null
+    },
+    {
+      "community": 43,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_TrustedBySection::TrustedBySection",
+      "label": "TrustedBySection()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/TrustedBySection.js",
+      "source_line": 10
+    },
+    {
+      "community": 50,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_CaseStudiesPreview",
+      "label": "CaseStudiesPreview.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CaseStudiesPreview.js",
+      "source_line": null
+    },
+    {
+      "community": 50,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_CaseStudiesPreview::CaseStudiesPreview",
+      "label": "CaseStudiesPreview()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CaseStudiesPreview.js",
+      "source_line": 28
+    },
+    {
+      "community": 25,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_Footer",
+      "label": "Footer.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Footer.js",
+      "source_line": null
+    },
+    {
+      "community": 25,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_Footer::Footer",
+      "label": "Footer()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Footer.js",
+      "source_line": 2
+    },
+    {
+      "community": 25,
+      "docstring": null,
+      "file_type": "stub",
+      "id": "getfullyear",
+      "label": "getfullyear",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/Footer.js",
+      "source_line": null
+    },
+    {
+      "community": 20,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_CTASection",
+      "label": "CTASection.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CTASection.js",
+      "source_line": null
+    },
+    {
+      "community": 20,
+      "docstring": null,
+      "file_type": "code",
+      "id": "components_CTASection::CTASection",
+      "label": "CTASection()",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/components/CTASection.js",
+      "source_line": 4
+    },
+    {
+      "community": 54,
+      "docstring": null,
+      "file_type": "document",
+      "id": "mywebsite_AGENTS",
+      "label": "AGENTS.md",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/AGENTS.md",
+      "source_line": null
+    },
+    {
+      "community": 54,
+      "docstring": null,
+      "file_type": "document",
+      "id": "mywebsite_AGENTS::graphify",
+      "label": "graphify",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/AGENTS.md",
+      "source_line": 2
+    },
+    {
+      "community": 56,
+      "docstring": null,
+      "file_type": "code",
+      "id": "mywebsite_postcss.config",
+      "label": "postcss.config.js",
+      "source_file": "/Users/abhishek/Documents/Workspaces/mywebsite/postcss.config.js",
+      "source_line": null
+    }
+  ]
+}

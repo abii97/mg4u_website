@@ -3,8 +3,8 @@ import Footer from '../components/Footer'
 import './globals.css'
 
 export const metadata = {
-  title: 'Mediaguide4u — We Engineer Influence That Converts',
-  description: 'Scaling D2C, SaaS, and global brands through performance-driven influencer campaigns.',
+  title: 'Reputation, Creators & Communication Agency — India & APAC',
+  description: 'Global communications and creator-led growth agency helping brands, institutions and governments manage reputation, navigate crises, and scale content across languages, platforms and cities.',
 }
 
 export default function RootLayout({ children }) {
