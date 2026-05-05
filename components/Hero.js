@@ -120,7 +120,7 @@ function HeroContent() {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="text-lg md:text-xl text-text-secondary mb-10 max-w-3xl mx-auto leading-relaxed"
       >
-        Global communications and creator-led growth—built in India &amp; APAC for reputation, crisis, and scale.
+        Global communications and creator-led growth—built in India & APAC for reputation, crisis, and scale.
       </motion.p>
 
       <motion.div
