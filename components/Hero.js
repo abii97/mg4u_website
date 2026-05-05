@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 
 // --- Animation system: multi-layer dark-navy cursor glow ---
 const GLOW_LAYERS = [
-  { ease: 0.08, opacity: 0.15, blur: 60,  scale: 0.60, size: 400 },
-  { ease: 0.06, opacity: 0.12, blur: 80,  scale: 0.80, size: 500 },
-  { ease: 0.05, opacity: 0.10, blur: 100, scale: 1.00, size: 600 },
+  { ease: 0.08, opacity: 0.18, blur: 60,  scale: 0.60, size: 400 },
+  { ease: 0.06, opacity: 0.14, blur: 80,  scale: 0.80, size: 500 },
+  { ease: 0.05, opacity: 0.11, blur: 100, scale: 1.00, size: 600 },
 ]
 
 const GLOW_COLOR = '5,30,80'
@@ -120,10 +120,7 @@ function HeroContent() {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="text-lg md:text-xl text-text-secondary mb-10 max-w-3xl mx-auto leading-relaxed"
       >
-        We are a global communications and creator‑led growth agency with deep India &amp; APAC roots—helping
-        brands, institutions and governments manage reputation, navigate crises, and scale content across
-        languages and platforms. From sustainability and CSR storytelling to meme‑driven creator campaigns and
-        always‑on crisis desks, we design narratives people trust and remember.
+        Global communications and creator-led growth—built in India &amp; APAC for reputation, crisis, and scale.
       </motion.p>
 
       <motion.div
