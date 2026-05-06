@@ -2,8 +2,9 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { ShimmerButton } from '@/components/ui/shimmer-button'
+import { Particles } from '@/components/ui/particles'
 
-// --- Animation system: multi-layer dark-navy cursor glow ---
 const GLOW_LAYERS = [
   { ease: 0.08, opacity: 0.18, blur: 60,  scale: 0.60, size: 400 },
   { ease: 0.06, opacity: 0.14, blur: 80,  scale: 0.80, size: 500 },
@@ -169,9 +170,14 @@ function HeroContent() {
           href="https://wa.me/your-number"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-primary text-text-inverse px-8 py-4 rounded-md font-semibold text-base transition-shadow hover:shadow-2"
         >
-          Chat with us on WhatsApp
+          <ShimmerButton
+            shimmerColor="#ffffff"
+            background="#0B72FF"
+            className="!px-8 !py-4 !rounded-md !text-base !font-semibold"
+          >
+            Chat with us on WhatsApp
+          </ShimmerButton>
         </motion.a>
         <motion.a
           whileHover={{ scale: 1.05 }}
@@ -240,6 +246,17 @@ export default function Hero() {
       ) : (
         <StaticGlow />
       )}
+
+      <Particles
+        className="absolute inset-0"
+        quantity={40}
+        staticity={40}
+        ease={60}
+        size={0.5}
+        color="#0B72FF"
+        vx={0.05}
+        vy={0.05}
+      />
 
       <HeroContent />
     </section>

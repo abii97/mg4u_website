@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { ShimmerButton } from '@/components/ui/shimmer-button'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -57,18 +58,21 @@ export default function Navbar() {
         <ul className="hidden md:flex gap-6 text-sm text-text-secondary">
           {links.map(({ href, label }) => (
             <li key={href}>
-              <Link href={href} className="hover:text-primary transition-colors duration-fast">
+              <Link href={href} className="hover:text-primary transition-colors duration-fast block py-1.5">
                 {label}
               </Link>
             </li>
           ))}
         </ul>
 
-        <Link
-          href="/contact"
-          className="hidden md:inline-flex bg-primary text-text-inverse px-5 py-2.5 rounded-md font-semibold text-sm hover:bg-primary-hover transition-colors duration-fast"
-        >
-          Get Started
+        <Link href="/contact" className="hidden md:block">
+          <ShimmerButton
+            shimmerColor="#ffffff"
+            background="#0B72FF"
+            className="!px-5 !py-2 !rounded-md !text-sm !font-semibold"
+          >
+            Get Started
+          </ShimmerButton>
         </Link>
 
         <button
@@ -92,7 +96,7 @@ export default function Navbar() {
               key={href}
               href={href}
               onClick={() => setOpen(false)}
-              className="text-text-secondary hover:text-primary transition-colors text-base py-2"
+              className="text-text-secondary hover:text-primary transition-colors text-base py-3"
             >
               {label}
             </Link>

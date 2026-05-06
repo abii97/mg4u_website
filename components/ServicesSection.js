@@ -1,6 +1,7 @@
 'use client'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { BlurFade } from '@/components/ui/blur-fade'
+import { ShineBorder } from '@/components/ui/shine-border'
 
 const IconShield = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -29,29 +30,25 @@ const IconPin = () => (
 
 const pillars = [
   {
-    num: '01',
-    icon: <IconShield />,
+    num: '01', icon: <IconShield />,
     title: 'Reputation, Crisis & Sustainability Communication',
     desc: 'Real‑time listening, rapid response and narrative repair for high‑trust sectors.',
     accent: 'border-l-primary/40',
   },
   {
-    num: '02',
-    icon: <IconSpark />,
+    num: '02', icon: <IconSpark />,
     title: 'Creator & Meme‑Led Campaigns',
     desc: 'Full‑funnel influencer, UGC and regional creator programs that drive real action.',
     accent: 'border-l-purple-400/40',
   },
   {
-    num: '03',
-    icon: <IconChat />,
+    num: '03', icon: <IconChat />,
     title: 'WhatsApp, SMS & Full‑Stack Communication',
     desc: 'Leveraging 90%+ open rates for D2C, institutions and stakeholder communication.',
     accent: 'border-l-green-500/40',
   },
   {
-    num: '04',
-    icon: <IconPin />,
+    num: '04', icon: <IconPin />,
     title: 'On‑Ground, Events & Digital Foundations',
     desc: 'Activations, content and high‑trust sites engineered for clarity and conversion.',
     accent: 'border-l-amber-500/40',
@@ -62,54 +59,42 @@ export default function ServicesSection() {
   return (
     <section className="bg-surface-base py-section-y px-6">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-14"
-        >
-          <h2 className="text-4xl font-bold mb-4 text-text-primary">What we do</h2>
-          <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Four pillars designed for a world where a tweet, reel or review can move markets.
-          </p>
-        </motion.div>
+        <BlurFade delay={0.1}>
+          <div className="text-center mb-14">
+            <h2 className="text-4xl font-bold mb-4 text-text-primary">What we do</h2>
+            <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
+              Four pillars designed for a world where a tweet, reel or review can move markets.
+            </p>
+          </div>
+        </BlurFade>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
           {pillars.map(({ num, icon, title, desc, accent }, i) => (
-            <motion.div
-              key={num}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`bg-surface-alt border border-gray-100 border-l-2 rounded-md p-6 lg:p-8 flex gap-5 shadow-1 ${accent}`}
-            >
-              <div className="text-primary shrink-0 mt-0.5">{icon}</div>
-              <div className="flex flex-col gap-2">
-                <span className="text-xs font-mono text-primary tracking-wider font-semibold">{num}</span>
-                <h3 className="text-xl font-bold text-text-primary">{title}</h3>
-                <p className="text-sm text-text-secondary leading-relaxed">{desc}</p>
+            <BlurFade key={num} delay={0.15 + i * 0.1}>
+              <div className={`relative overflow-hidden bg-surface-alt border border-gray-100 border-l-2 rounded-md p-6 lg:p-8 flex gap-5 shadow-1 transition-shadow hover:shadow-2 duration-base ${accent}`}>
+                <ShineBorder shineColor="#0B72FF" borderWidth={1} duration={14} />
+                <div className="text-primary shrink-0 mt-0.5 relative z-10">{icon}</div>
+                <div className="flex flex-col gap-2 relative z-10">
+                  <span className="text-xs font-mono text-primary tracking-wider font-semibold">{num}</span>
+                  <h3 className="text-xl font-bold text-text-primary">{title}</h3>
+                  <p className="text-sm text-text-secondary leading-relaxed">{desc}</p>
+                </div>
               </div>
-            </motion.div>
+            </BlurFade>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
-        >
-          <Link
-            href="/services"
-            className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary-hover transition-colors duration-fast font-medium"
-          >
-            Explore all services
-            <span className="text-lg">&rarr;</span>
-          </Link>
-        </motion.div>
+        <BlurFade delay={0.6}>
+          <div className="text-center">
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary-hover transition-colors duration-fast font-medium"
+            >
+              Explore all services
+              <span className="text-lg">&rarr;</span>
+            </Link>
+          </div>
+        </BlurFade>
       </div>
     </section>
   )

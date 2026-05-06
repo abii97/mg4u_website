@@ -23,10 +23,10 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex gap-6 text-sm text-white/60">
-          <Link href="/services" className="hover:text-white transition-colors duration-fast">Services</Link>
-          <Link href="/case-studies" className="hover:text-white transition-colors duration-fast">Case Studies</Link>
-          <Link href="/about" className="hover:text-white transition-colors duration-fast">About</Link>
-          <Link href="/contact" className="hover:text-white transition-colors duration-fast">Contact</Link>
+          <Link href="/services" className="hover:text-white transition-colors duration-fast py-1.5">Services</Link>
+          <Link href="/case-studies" className="hover:text-white transition-colors duration-fast py-1.5">Case Studies</Link>
+          <Link href="/about" className="hover:text-white transition-colors duration-fast py-1.5">About</Link>
+          <Link href="/contact" className="hover:text-white transition-colors duration-fast py-1.5">Contact</Link>
         </div>
       </div>
     </footer>
