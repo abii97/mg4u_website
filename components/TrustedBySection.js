@@ -1,11 +1,12 @@
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const logos = [
-  'ideaForge',
-  'Emcure',
-  'Kaya',
-  'Just Herbs',
+  { name: 'ideaForge', src: '/logos/ideaforge.svg' },
+  { name: 'Emcure', src: '/logos/emcure.svg' },
+  { name: 'Kaya', src: '/logos/kaya.svg' },
+  { name: 'Just Herbs', src: '/logos/just-herbs.svg' },
 ]
 
 export default function TrustedBySection() {
@@ -22,7 +23,7 @@ export default function TrustedBySection() {
           <h2 className="text-4xl font-bold mb-4 text-text-primary">Trusted where there&rsquo;s no room for error</h2>
           <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
             We work with organisations that carry public trust, regulatory scrutiny and community
-            expectations—alongside ambitious new‑age brands rewriting their categories.
+            expectations—alongside ambitious new-age brands rewriting their categories.
           </p>
         </motion.div>
 
@@ -33,17 +34,23 @@ export default function TrustedBySection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-wrap items-center justify-center gap-8 md:gap-16 mb-16"
         >
-          {logos.map((logo, i) => (
-            <motion.span
-              key={logo}
+          {logos.map(({ name, src }, i) => (
+            <motion.div
+              key={name}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="text-xl md:text-2xl font-bold text-text-secondary hover:text-primary transition-colors duration-fast cursor-default"
+              className="grayscale opacity-40 hover:opacity-70 hover:grayscale-0 transition-all duration-base"
             >
-              {logo}
-            </motion.span>
+              <Image
+                src={src}
+                alt={name}
+                width={140}
+                height={36}
+                style={{ objectFit: 'contain', height: 32 }}
+              />
+            </motion.div>
           ))}
         </motion.div>
 

@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 // --- Animation system: multi-layer dark-navy cursor glow ---
 const GLOW_LAYERS = [
@@ -10,6 +11,13 @@ const GLOW_LAYERS = [
 ]
 
 const GLOW_COLOR = '5,30,80'
+
+const TRUSTED_BRANDS = [
+  { name: 'ideaForge', logo: '/logos/ideaforge.svg' },
+  { name: 'Emcure', logo: '/logos/emcure.svg' },
+  { name: 'Kaya', logo: '/logos/kaya.svg' },
+  { name: 'Just Herbs', logo: '/logos/just-herbs.svg' },
+]
 
 function useReducedMotion() {
   const [reduced, setReduced] = useState(false)
@@ -80,7 +88,6 @@ function GlowLayer({ index, targetRef, currentRef, active }) {
   )
 }
 
-// --- Static decorative fallback (mobile / reduced motion) ---
 function StaticGlow() {
   return (
     <>
@@ -93,7 +100,34 @@ function StaticGlow() {
   )
 }
 
-// --- Hero content (unchanged copy) ---
+function TrustStrip() {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 1 }}
+      className="flex flex-col items-center gap-4"
+    >
+      <p className="text-xs text-text-secondary uppercase tracking-widest font-medium">
+        Trusted by
+      </p>
+      <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+        {TRUSTED_BRANDS.map(({ name, logo }) => (
+          <Image
+            key={name}
+            src={logo}
+            alt={name}
+            width={100}
+            height={28}
+            className="opacity-50 hover:opacity-80 transition-opacity duration-fast grayscale"
+            style={{ objectFit: 'contain', height: 24 }}
+          />
+        ))}
+      </div>
+    </motion.div>
+  )
+}
+
 function HeroContent() {
   return (
     <motion.div
@@ -120,14 +154,14 @@ function HeroContent() {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="text-lg md:text-xl text-text-secondary mb-10 max-w-3xl mx-auto leading-relaxed"
       >
-        Global communications and creator-led growth—built in India & APAC for reputation, crisis, and scale.
+        Global communications and creator-led growth—built in India &amp; APAC for reputation, crisis, and scale.
       </motion.p>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.7 }}
-        className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
+        className="flex flex-col sm:flex-row gap-4 justify-center mb-10"
       >
         <motion.a
           whileHover={{ scale: 1.05 }}
@@ -149,20 +183,11 @@ function HeroContent() {
         </motion.a>
       </motion.div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-        className="text-sm text-text-secondary max-w-2xl mx-auto leading-relaxed"
-      >
-        Trusted by leaders like ideaForge, Emcure, Kaya, Just Herbs and high‑stakes institutions across
-        healthcare, education, government and consumer services.
-      </motion.p>
+      <TrustStrip />
     </motion.div>
   )
 }
 
-// --- Main Hero ---
 export default function Hero() {
   const heroRef = useRef(null)
   const targetRef = useRef({ x: 0, y: 0 })

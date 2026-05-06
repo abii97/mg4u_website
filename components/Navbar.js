@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 export default function Navbar() {
@@ -39,8 +40,18 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
-        <Link href="/" className="text-xl font-bold tracking-tight text-text-primary">
-          Mediaguide<span className="text-primary">4u</span>
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <Image
+            src="/logo.png"
+            alt="Mediaguide4u"
+            width={36}
+            height={36}
+            priority
+            className="transition-opacity duration-fast"
+          />
+          <span className="text-xl font-bold tracking-tight text-text-primary">
+            Mediaguide<span className="text-primary">4u</span>
+          </span>
         </Link>
 
         <ul className="hidden md:flex gap-6 text-sm text-text-secondary">

@@ -5,6 +5,7 @@ import CaseStudiesSection from '../components/CaseStudiesSection'
 import ProcessSection from '../components/ProcessSection'
 import WhyUsSection from '../components/WhyUsSection'
 import TrustedBySection from '../components/TrustedBySection'
+import CTASection from '../components/CTASection'
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <ProcessSection />
       <WhyUsSection />
       <TrustedBySection />
+      <CTASection />
     </>
   )
 }

@@ -2,6 +2,13 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
+const IconCheck = () => (
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+    <polyline points="22 4 12 14.01 9 11.01"/>
+  </svg>
+)
+
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
 
@@ -11,8 +18,17 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen py-section-y px-6">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen py-section-y px-6 relative">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          className="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full bg-primary/[0.03] blur-3xl"
+        />
+        <div
+          className="absolute -top-20 -right-20 w-[350px] h-[350px] rounded-full bg-primary/[0.02] blur-3xl"
+        />
+      </div>
+
+      <div className="max-w-4xl mx-auto relative z-10">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -32,7 +48,10 @@ export default function ContactPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             {submitted ? (
-              <div className="bg-surface-alt border border-primary/30 rounded-md p-8 text-center shadow-1">
+              <div className="bg-surface-alt border border-primary/30 rounded-md p-10 text-center shadow-1">
+                <div className="text-primary mb-4 flex justify-center">
+                  <IconCheck />
+                </div>
                 <p className="text-2xl font-semibold mb-2 text-text-primary">Thank you!</p>
                 <p className="text-text-secondary">We&apos;ll get back to you within 24 hours.</p>
               </div>
