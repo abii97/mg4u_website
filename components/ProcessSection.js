@@ -1,72 +1,109 @@
 'use client'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { BlurFade } from '@/components/ui/blur-fade'
 
-const IconArrow = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <polyline points="9 18 15 12 9 6"/>
-  </svg>
-)
-
 const steps = [
-  { num: '01', title: 'Listen & map risk vs. opportunity', icon: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12h2M6 8v8M10 5v14M14 9v6M18 7v10M20 12h2"/></svg>
-  )},
-  { num: '02', title: 'Design the narrative & guardrails', icon: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-  )},
-  { num: '03', title: 'Build creator & communication engines', icon: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-  )},
-  { num: '04', title: 'Monitor, optimise & protect', icon: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-  )},
+  {
+    num: '01',
+    title: 'Listen & map risk vs. opportunity',
+    desc: 'Deep-dive into your communication landscape — social listening, stakeholder mapping, and risk auditing.',
+    color: '#0F75BC',
+  },
+  {
+    num: '02',
+    title: 'Design narrative & guardrails',
+    desc: 'Craft messaging architecture, crisis playbooks, and creator briefs aligned to your brand\'s truth.',
+    color: '#F7941D',
+  },
+  {
+    num: '03',
+    title: 'Build creator & comms engines',
+    desc: 'Deploy teams, tools, and creative pipelines — from WhatsApp chatbots to UGC factories.',
+    color: '#7C3AED',
+  },
+  {
+    num: '04',
+    title: 'Monitor, optimise & protect',
+    desc: 'Real‑time dashboards, sentiment tracking, and rapid response — because the next tweet is the next crisis.',
+    color: '#00D4FF',
+  },
 ]
 
 export default function ProcessSection() {
   return (
-    <section className="bg-surface-base py-section-y px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative bg-surface-base py-section-y px-6" id="process">
+      <div className="max-w-7xl mx-auto">
         <BlurFade delay={0.1}>
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold mb-4 text-text-primary">How we work when stakes are high</h2>
-            <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
-              A process designed for sensitive sectors, fast-moving platforms and multi-stakeholder environments.
+          <div className="text-center mb-16">
+            <span className="text-xs text-brand-orange uppercase tracking-[0.2em] font-semibold mb-4 block">
+              How we work
+            </span>
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-5 text-white tracking-tight">
+              A process designed for{' '}
+              <span className="text-gradient">high‑stakes environments.</span>
+            </h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
+              Sensitive sectors, fast-moving platforms and multi‑stakeholder worlds.
             </p>
           </div>
         </BlurFade>
 
-        <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
-          {steps.map(({ num, title, icon }, i) => (
-            <div key={num} className="relative overflow-visible">
+        <div className="relative mb-12">
+          <div className="hidden lg:block absolute top-12 left-0 right-0 h-px bg-white/[0.06]" />
+          {steps.map(({ num, title, desc, color }, i) => (
+            <div key={num} className="relative lg:absolute lg:top-0" style={{ left: `${(i / (steps.length - 1)) * 100}%`, transform: 'translateX(-50%)' }}>
               {i < steps.length - 1 && (
-                <div className="hidden lg:flex absolute top-10 -right-2.5 z-10 text-primary/20">
-                  <IconArrow />
-                </div>
+                <div className="hidden lg:block absolute top-12 left-full w-[calc((100vw-12rem)/3-2rem)] h-px bg-white/[0.04]" />
               )}
-              <BlurFade delay={0.1 + i * 0.08}>
-                <div className="bg-surface-alt border border-gray-100 p-6 rounded-md flex flex-col gap-3 shadow-1 hover:shadow-2 hover:border-primary/30 transition-all duration-base h-full">
-                  <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                      <span className="text-xs font-mono font-bold">{num}</span>
-                    </span>
-                    <div className="text-primary">{icon}</div>
+              <div className="lg:flex lg:flex-col lg:items-center lg:absolute lg:top-0 lg:-translate-x-1/2">
+                <BlurFade delay={0.1 + i * 0.1}>
+                  <div className="flex lg:flex-col items-center gap-5 lg:gap-4 py-6 lg:py-0">
+                    <motion.div
+                      whileHover={{ scale: 1.1, boxShadow: `0 0 30px ${color}30` }}
+                      className="shrink-0 w-16 h-16 lg:w-14 lg:h-14 rounded-2xl flex items-center justify-center text-xl font-extrabold transition-all duration-base relative z-10"
+                      style={{ background: `${color}18`, color, border: `1px solid ${color}30` }}
+                    >
+                      {num}
+                    </motion.div>
+                    <div className="lg:text-center lg:max-w-[200px] lg:mt-4 relative z-10">
+                      <h3 className="text-lg font-bold text-white mb-1.5">{title}</h3>
+                      <p className="text-sm text-text-secondary leading-relaxed">{desc}</p>
+                    </div>
                   </div>
-                  <h3 className="text-base font-semibold text-text-primary">{title}</h3>
-                </div>
-              </BlurFade>
+                </BlurFade>
+              </div>
             </div>
           ))}
+
+          <div className="lg:hidden mt-6 flex flex-col gap-6">
+            {steps.map(({ num, title, desc, color }, i) => (
+              <BlurFade key={num} delay={0.1 + i * 0.1}>
+                <div className="flex items-start gap-5">
+                  <div
+                    className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-lg font-extrabold"
+                    style={{ background: `${color}18`, color, border: `1px solid ${color}30` }}
+                  >
+                    {num}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-1">{title}</h3>
+                    <p className="text-sm text-text-secondary leading-relaxed">{desc}</p>
+                  </div>
+                </div>
+              </BlurFade>
+            ))}
+          </div>
         </div>
 
-        <BlurFade delay={0.5}>
-          <div className="text-center">
+        <BlurFade delay={0.55}>
+          <div className="text-center mt-16">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary-hover transition-colors duration-fast font-medium"
+              className="inline-flex items-center gap-2 text-sm text-brand-orange hover:text-[#e08515] transition-colors duration-fast font-medium group"
             >
               Learn about our process
-              <span className="text-lg">&rarr;</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </Link>
           </div>
         </BlurFade>

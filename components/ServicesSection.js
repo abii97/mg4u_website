@@ -1,97 +1,97 @@
 'use client'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { BlurFade } from '@/components/ui/blur-fade'
-import { ShineBorder } from '@/components/ui/shine-border'
-
-const IconShield = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-    <path d="M9 12l2 2 4-4"/>
-  </svg>
-)
-const IconSpark = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M13 2L4.093 12.688c-.348.418-.523.627-.48.808.034.159.145.29.302.352.185.073.474.003 1.052-.138L11 12l-3.5 7.5"/>
-    <path d="M13 2l2.5 10.5L11 12l2.5-5.5"/>
-  </svg>
-)
-const IconChat = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-    <path d="M8 9h8M8 13h4"/>
-  </svg>
-)
-const IconPin = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-    <circle cx="12" cy="10" r="3"/>
-  </svg>
-)
 
 const pillars = [
   {
-    num: '01', icon: <IconShield />,
-    title: 'Reputation, Crisis & Sustainability Communication',
-    desc: 'Real‑time listening, rapid response and narrative repair for high‑trust sectors.',
-    accent: 'border-l-primary/40',
+    num: '01',
+    title: 'Reputation, Crisis & Sustainability',
+    desc: 'Real‑time listening, rapid response and narrative repair for high‑trust sectors where perception is everything.',
+    color: '#0F75BC',
   },
   {
-    num: '02', icon: <IconSpark />,
+    num: '02',
     title: 'Creator & Meme‑Led Campaigns',
-    desc: 'Full‑funnel influencer, UGC and regional creator programs that drive real action.',
-    accent: 'border-l-purple-400/40',
+    desc: 'Full‑funnel influencer, UGC and regional creator programs that drive measurable action across languages and platforms.',
+    color: '#F7941D',
   },
   {
-    num: '03', icon: <IconChat />,
-    title: 'WhatsApp, SMS & Full‑Stack Communication',
-    desc: 'Leveraging 90%+ open rates for D2C, institutions and stakeholder communication.',
-    accent: 'border-l-green-500/40',
+    num: '03',
+    title: 'WhatsApp, SMS & Full‑Stack Comms',
+    desc: 'Leveraging 90%+ open rates for D2C, institutions and stakeholder communication at scale.',
+    color: '#7C3AED',
   },
   {
-    num: '04', icon: <IconPin />,
+    num: '04',
     title: 'On‑Ground, Events & Digital Foundations',
-    desc: 'Activations, content and high‑trust sites engineered for clarity and conversion.',
-    accent: 'border-l-amber-500/40',
+    desc: 'Activations, content and high‑trust sites engineered for clarity, credibility and conversion.',
+    color: '#00D4FF',
   },
 ]
 
 export default function ServicesSection() {
   return (
-    <section className="bg-surface-base py-section-y px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative bg-surface-base py-section-y px-6" id="services">
+      <div className="max-w-7xl mx-auto">
         <BlurFade delay={0.1}>
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold mb-4 text-text-primary">What we do</h2>
-            <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
-              Four pillars designed for a world where a tweet, reel or review can move markets.
+          <div className="text-center mb-16">
+            <span className="text-xs text-brand-orange uppercase tracking-[0.2em] font-semibold mb-4 block">
+              What we do
+            </span>
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-5 text-white tracking-tight">
+              Four pillars for a world where{' '}
+              <span className="text-gradient">one post can move markets.</span>
+            </h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
+              Communication that is fast, credible and built for scrutiny.
             </p>
           </div>
         </BlurFade>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
-          {pillars.map(({ num, icon, title, desc, accent }, i) => (
-            <BlurFade key={num} delay={0.15 + i * 0.1}>
-              <div className={`relative overflow-hidden bg-surface-alt border border-gray-100 border-l-2 rounded-md p-6 lg:p-8 flex gap-5 shadow-1 transition-shadow hover:shadow-2 duration-base ${accent}`}>
-                <ShineBorder shineColor="#0B72FF" borderWidth={1} duration={14} />
-                <div className="text-primary shrink-0 mt-0.5 relative z-10">{icon}</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+          {pillars.map(({ num, title, desc, color }, i) => (
+            <BlurFade key={num} delay={0.1 + i * 0.08}>
+              <motion.div
+                whileHover={{ y: -2, scale: 1.01 }}
+                className="group relative overflow-hidden bg-surface-elevated/60 backdrop-blur-sm border border-white/[0.06] rounded-xl p-6 md:p-8 flex gap-5 transition-all duration-base cursor-default"
+                style={{ '--pillar-color': color }}
+              >
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-base pointer-events-none"
+                  style={{
+                    background: `radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), ${color}0D, transparent 40%)`,
+                  }}
+                />
+                <div
+                  className="absolute bottom-0 left-0 right-0 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-base"
+                  style={{ background: `linear-gradient(90deg, transparent, ${color}40, transparent)` }}
+                />
+                <div
+                  className="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center text-lg font-bold relative z-10"
+                  style={{ background: `${color}18`, color }}
+                >
+                  {num}
+                </div>
                 <div className="flex flex-col gap-2 relative z-10">
-                  <span className="text-xs font-mono text-primary tracking-wider font-semibold">{num}</span>
-                  <h3 className="text-xl font-bold text-text-primary">{title}</h3>
+                  <h3 className="text-xl font-bold text-white group-hover:text-[var(--pillar-color)] transition-colors duration-base">
+                    {title}
+                  </h3>
                   <p className="text-sm text-text-secondary leading-relaxed">{desc}</p>
                 </div>
-              </div>
+              </motion.div>
             </BlurFade>
           ))}
         </div>
 
-        <BlurFade delay={0.6}>
+        <BlurFade delay={0.55}>
           <div className="text-center">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary-hover transition-colors duration-fast font-medium"
+              className="inline-flex items-center gap-2 text-sm text-brand-orange hover:text-[#e08515] transition-colors duration-fast font-medium group"
             >
               Explore all services
-              <span className="text-lg">&rarr;</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </Link>
           </div>
         </BlurFade>

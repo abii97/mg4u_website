@@ -2,38 +2,49 @@
 import Link from 'next/link'
 import { BlurFade } from '@/components/ui/blur-fade'
 
-const IconShield = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-)
-const IconGlobe = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-)
-const IconClock = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-)
-
 const reasons = [
-  { title: 'High-trust sectors are our default', icon: <IconShield /> },
-  { title: 'Regional & vernacular first, not as an afterthought', icon: <IconGlobe /> },
-  { title: 'From tweet-speed crises to 12-month roadmaps', icon: <IconClock /> },
+  {
+    title: 'High‑trust sectors are our default',
+    desc: 'Pharma, defence, government, education — we don\'t just understand regulated environments, we thrive in them.',
+  },
+  {
+    title: 'Regional & vernacular first',
+    desc: 'India and APAC aren\'t afterthoughts. We build for languages, cultures and platforms that global agencies miss.',
+  },
+  {
+    title: 'From tweet‑speed crises to 12‑month roadmaps',
+    desc: 'Whether it\'s a 2 AM escalation or a year‑long reputation build, we have the muscle for both.',
+  },
 ]
 
 export default function WhyUsSection() {
   return (
-    <section className="bg-surface-alt py-section-y px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative bg-surface-base py-section-y px-6" id="why-us">
+      <div className="max-w-7xl mx-auto">
         <BlurFade delay={0.1}>
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold mb-4 text-text-primary">Why teams like yours call us</h2>
+          <div className="text-center mb-16">
+            <span className="text-xs text-brand-orange uppercase tracking-[0.2em] font-semibold mb-4 block">
+              Why us
+            </span>
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-5 text-white tracking-tight">
+              Why teams like yours{' '}
+              <span className="text-gradient-blue">call us.</span>
+            </h2>
           </div>
         </BlurFade>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
-          {reasons.map(({ title, icon }, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
+          {reasons.map(({ title, desc }, i) => (
             <BlurFade key={title} delay={0.1 + i * 0.1}>
-              <div className="bg-surface-base border border-gray-100 p-6 rounded-md transition-all text-center shadow-1 hover:shadow-2 hover:border-primary/30 duration-base">
-                <div className="text-primary mb-3 flex justify-center">{icon}</div>
-                <h3 className="text-base font-semibold text-text-primary">{title}</h3>
+              <div className="group glass rounded-xl p-7 transition-all duration-base glass-hover text-center">
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-5 text-xl font-bold"
+                  style={{ background: 'rgba(15,117,188,0.12)', color: '#0F75BC' }}
+                >
+                  {String(i + 1).padStart(2, '0')}
+                </div>
+                <h3 className="text-lg font-bold text-white mb-3">{title}</h3>
+                <p className="text-sm text-text-secondary leading-relaxed">{desc}</p>
               </div>
             </BlurFade>
           ))}
@@ -43,10 +54,10 @@ export default function WhyUsSection() {
           <div className="text-center">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary-hover transition-colors duration-fast font-medium"
+              className="inline-flex items-center gap-2 text-sm text-brand-orange hover:text-[#e08515] transition-colors duration-fast font-medium group"
             >
               More about us
-              <span className="text-lg">&rarr;</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </Link>
           </div>
         </BlurFade>

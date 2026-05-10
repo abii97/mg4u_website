@@ -1,44 +1,64 @@
 'use client'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { ShimmerButton } from '@/components/ui/shimmer-button'
 import { Particles } from '@/components/ui/particles'
 
 export default function CTASection() {
   return (
-    <section className="relative bg-surface-dark py-24 px-6 text-center overflow-hidden">
+    <section className="relative overflow-hidden py-32 px-6 text-center" style={{ background: 'var(--surface-deepest)' }}>
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-blue/5 blur-[150px]" />
+        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full bg-brand-orange/4 blur-[100px]" />
+      </div>
+
       <Particles
         className="absolute inset-0"
-        quantity={60}
+        quantity={80}
         staticity={30}
         ease={70}
         size={0.4}
-        color="#0B72FF"
-        vx={0.1}
-        vy={0.1}
+        color="#0F75BC"
+        vx={0.08}
+        vy={0.08}
       />
+
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="max-w-2xl mx-auto relative z-10"
+        transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+        className="max-w-3xl mx-auto relative z-10"
       >
-        <h2 className="text-4xl font-bold mb-4 text-text-inverse">Ready to Convert?</h2>
-        <p className="text-white/60 mb-8">
-          Let&apos;s engineer an influence strategy that turns views into revenue.
+        <h2 className="text-4xl md:text-6xl font-extrabold mb-6 text-white tracking-tight leading-[1.1]">
+          Ready to{' '}
+          <span className="text-gradient">engineer influence</span>
+          {' '}that converts?
+        </h2>
+        <p className="text-lg text-text-secondary mb-10 max-w-xl mx-auto leading-relaxed">
+          Let&apos;s build a communication strategy that turns attention into action and views into revenue.
         </p>
-        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-          <Link href="/contact">
-            <ShimmerButton
-              shimmerColor="#ffffff"
-              background="#0B72FF"
-              className="!px-10 !py-4 !rounded-md !text-lg !font-semibold"
+        <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
+          <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-10 py-4 text-base font-semibold text-white rounded-xl shadow-glow-orange transition-shadow duration-base hover:shadow-glow-lg"
+              style={{ background: 'var(--gradient-brand)' }}
             >
-              Get Started
-            </ShimmerButton>
-          </Link>
-        </motion.div>
+              Start a conversation
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </Link>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+            <a
+              href="https://wa.me/your-number"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-10 py-4 text-base font-semibold text-white/80 rounded-xl border border-white/[0.12] hover:bg-white/[0.04] hover:text-white hover:border-white/[0.2] transition-all duration-base"
+            >
+              Chat on WhatsApp
+            </a>
+          </motion.div>
+        </div>
       </motion.div>
     </section>
   )

@@ -2,65 +2,45 @@
 import Link from 'next/link'
 import { BlurFade } from '@/components/ui/blur-fade'
 
-const IconBag = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/>
-  </svg>
-)
-const IconCross = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-  </svg>
-)
-const IconCap = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/>
-  </svg>
-)
-const IconBuilding = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/>
-  </svg>
-)
-const IconZap = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-  </svg>
-)
-const IconGear = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-  </svg>
-)
-
 const industries = [
-  { label: 'D2C & Consumer Brands', icon: <IconBag /> },
-  { label: 'Healthcare, Pharma & Hospitals', icon: <IconCross /> },
-  { label: 'Schools, Colleges & Universities', icon: <IconCap /> },
-  { label: 'Government, Public Sector & Impact', icon: <IconBuilding /> },
-  { label: 'New‑Age & On‑Demand Services', icon: <IconZap /> },
-  { label: 'B2B Tech & Industrial', icon: <IconGear /> },
+  { label: 'D2C & Consumer Brands', color: '#0F75BC' },
+  { label: 'Healthcare, Pharma & Hospitals', color: '#F7941D' },
+  { label: 'Schools, Colleges & Universities', color: '#7C3AED' },
+  { label: 'Government, Public Sector & Impact', color: '#00D4FF' },
+  { label: 'New‑Age & On‑Demand Services', color: '#F7941D' },
+  { label: 'B2B Tech & Industrial', color: '#0F75BC' },
 ]
 
 export default function IndustriesSection() {
   return (
-    <section className="bg-surface-alt py-section-y px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative bg-surface-base py-section-y px-6" id="industries">
+      <div className="max-w-7xl mx-auto">
         <BlurFade delay={0.1}>
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold mb-4 text-text-primary">Who we partner with</h2>
-            <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
-              We specialise in mission‑critical communication and creator work where trust, compliance and speed
-              matter as much as views.
+          <div className="text-center mb-16">
+            <span className="text-xs text-brand-orange uppercase tracking-[0.2em] font-semibold mb-4 block">
+              Industries
+            </span>
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-5 text-white tracking-tight">
+              Partners in{' '}
+              <span className="text-gradient">mission‑critical sectors.</span>
+            </h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
+              We specialise where trust, compliance and speed matter as much as reach.
             </p>
           </div>
         </BlurFade>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
-          {industries.map(({ label, icon }, i) => (
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
+          {industries.map(({ label, color }, i) => (
             <BlurFade key={label} delay={0.08 + i * 0.06}>
-              <span className="bg-surface-base border border-gray-200 px-4 py-2.5 rounded-md text-sm font-medium text-text-primary transition-all shadow-1 flex items-center gap-2 hover:border-primary hover:shadow-2 duration-base cursor-default">
-                <span className="text-primary shrink-0">{icon}</span>
+              <span
+                className="px-5 py-3 rounded-xl text-sm font-medium transition-all duration-base border cursor-default"
+                style={{
+                  background: `${color}0D`,
+                  color,
+                  borderColor: `${color}25`,
+                }}
+              >
                 {label}
               </span>
             </BlurFade>
@@ -71,10 +51,10 @@ export default function IndustriesSection() {
           <div className="text-center">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary-hover transition-colors duration-fast font-medium"
+              className="inline-flex items-center gap-2 text-sm text-brand-orange hover:text-[#e08515] transition-colors duration-fast font-medium group"
             >
-              Learn more about our industry expertise
-              <span className="text-lg">&rarr;</span>
+              Learn about our industry expertise
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </Link>
           </div>
         </BlurFade>

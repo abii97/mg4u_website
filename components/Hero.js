@@ -1,17 +1,9 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
-import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
-import { ShimmerButton } from '@/components/ui/shimmer-button'
+import { motion } from 'framer-motion'
 import { Particles } from '@/components/ui/particles'
-
-const GLOW_LAYERS = [
-  { ease: 0.08, opacity: 0.18, blur: 60,  scale: 0.60, size: 400 },
-  { ease: 0.06, opacity: 0.14, blur: 80,  scale: 0.80, size: 500 },
-  { ease: 0.05, opacity: 0.11, blur: 100, scale: 1.00, size: 600 },
-]
-
-const GLOW_COLOR = '5,30,80'
 
 const TRUSTED_BRANDS = [
   { name: 'ideaForge', logo: '/logos/ideaforge.svg' },
@@ -20,245 +12,121 @@ const TRUSTED_BRANDS = [
   { name: 'Just Herbs', logo: '/logos/just-herbs.svg' },
 ]
 
-function useReducedMotion() {
-  const [reduced, setReduced] = useState(false)
-  useEffect(() => {
-    const mql = window.matchMedia('(prefers-reduced-motion: reduce)')
-    setReduced(mql.matches)
-    const onChange = (e) => setReduced(e.matches)
-    mql.addEventListener('change', onChange)
-    return () => mql.removeEventListener('change', onChange)
-  }, [])
-  return reduced
-}
-
-function useIsMobile() {
-  const [mobile, setMobile] = useState(false)
-  useEffect(() => {
-    const check = () => setMobile(window.innerWidth < 768)
-    check()
-    window.addEventListener('resize', check)
-    return () => window.removeEventListener('resize', check)
-  }, [])
-  return mobile
-}
-
-function GlowLayer({ index, targetRef, currentRef, active }) {
-  const elRef = useRef(null)
-  const layer = GLOW_LAYERS[index]
-
-  useEffect(() => {
-    if (!active) return
-    const el = elRef.current
-    if (!el) return
-
-    let raf
-    const animate = () => {
-      const curr = currentRef.current[index]
-      const tgt = targetRef.current
-      const nx = curr.x + (tgt.x - curr.x) * layer.ease
-      const ny = curr.y + (tgt.y - curr.y) * layer.ease
-      curr.x = nx
-      curr.y = ny
-      const tx = nx * layer.scale
-      const ty = ny * layer.scale
-      el.style.transform = `translate3d(${tx.toFixed(2)}px, ${ty.toFixed(2)}px, 0)`
-      raf = requestAnimationFrame(animate)
-    }
-    raf = requestAnimationFrame(animate)
-    return () => cancelAnimationFrame(raf)
-  }, [active, index, targetRef, currentRef])
-
-  return (
-    <div
-      ref={elRef}
-      className="absolute rounded-full will-change-transform pointer-events-none"
-      style={{
-        width: layer.size,
-        height: layer.size,
-        background: `radial-gradient(circle, rgba(${GLOW_COLOR},${layer.opacity}) 0%, transparent 70%)`,
-        filter: `blur(${layer.blur}px)`,
-        boxShadow: `0 0 ${layer.blur * 2}px ${layer.blur / 3}px rgba(${GLOW_COLOR},0.06)`,
-        left: '50%',
-        top: '50%',
-        marginLeft: -layer.size / 2,
-        marginTop: -layer.size / 2,
-        transform: 'translate3d(0px, 0px, 0)',
-      }}
-    />
-  )
-}
-
-function StaticGlow() {
-  return (
-    <>
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[700px] h-[700px] rounded-full bg-primary/5 blur-3xl" />
-      </div>
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary/3 blur-2xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/3 blur-2xl" />
-    </>
-  )
-}
-
-function TrustStrip() {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1, delay: 1 }}
-      className="flex flex-col items-center gap-4"
-    >
-      <p className="text-xs text-text-secondary uppercase tracking-widest font-medium">
-        Trusted by
-      </p>
-      <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
-        {TRUSTED_BRANDS.map(({ name, logo }) => (
-          <Image
-            key={name}
-            src={logo}
-            alt={name}
-            width={100}
-            height={28}
-            className="opacity-50 hover:opacity-80 transition-opacity duration-fast grayscale"
-            style={{ objectFit: 'contain', height: 24 }}
-          />
-        ))}
-      </div>
-    </motion.div>
-  )
-}
-
-function HeroContent() {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: 'easeOut' }}
-      className="relative z-10 text-center max-w-4xl px-6 py-24"
-    >
-      <motion.h1
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-3xl md:text-4xl lg:text-4xl font-extrabold leading-tight tracking-tight mb-8 text-text-primary"
-      >
-        Reputation, creators and communication that{' '}
-        <span className="text-primary">
-          stand up to real‑world scrutiny.
-        </span>
-      </motion.h1>
-
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        className="text-lg md:text-xl text-text-secondary mb-10 max-w-3xl mx-auto leading-relaxed"
-      >
-        Global communications and creator-led growth—built in India &amp; APAC for reputation, crisis, and scale.
-      </motion.p>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.7 }}
-        className="flex flex-col sm:flex-row gap-4 justify-center mb-10"
-      >
-        <motion.a
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.98 }}
-          href="https://wa.me/your-number"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <ShimmerButton
-            shimmerColor="#ffffff"
-            background="#0B72FF"
-            className="!px-8 !py-4 !rounded-md !text-base !font-semibold"
-          >
-            Chat with us on WhatsApp
-          </ShimmerButton>
-        </motion.a>
-        <motion.a
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.98 }}
-          href="/contact"
-          className="border border-primary/30 text-primary px-8 py-4 rounded-md font-semibold text-base hover:bg-primary/5 transition-all duration-fast"
-        >
-          Submit a brief or query
-        </motion.a>
-      </motion.div>
-
-      <TrustStrip />
-    </motion.div>
-  )
-}
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.8, delay, ease: [0.25, 0.46, 0.45, 0.94] },
+})
 
 export default function Hero() {
-  const heroRef = useRef(null)
-  const targetRef = useRef({ x: 0, y: 0 })
-  const currentRef = useRef(GLOW_LAYERS.map(() => ({ x: 0, y: 0 })))
-
-  const reducedMotion = useReducedMotion()
-  const isMobile = useIsMobile()
-  const glowActive = !reducedMotion && !isMobile
-
-  useEffect(() => {
-    if (!glowActive) return
-    const el = heroRef.current
-    if (!el) return
-
-    const handleMove = (e) => {
-      const rect = el.getBoundingClientRect()
-      targetRef.current.x = e.clientX - rect.left - rect.width / 2
-      targetRef.current.y = e.clientY - rect.top - rect.height / 2
-    }
-
-    const handleLeave = () => {
-      targetRef.current.x = 0
-      targetRef.current.y = 0
-    }
-
-    el.addEventListener('mousemove', handleMove, { passive: true })
-    el.addEventListener('mouseleave', handleLeave)
-    return () => {
-      el.removeEventListener('mousemove', handleMove)
-      el.removeEventListener('mouseleave', handleLeave)
-    }
-  }, [glowActive])
+  const ref = useRef(null)
 
   return (
     <section
-      ref={heroRef}
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
-      style={{ background: 'linear-gradient(180deg, #ffffff 0%, #f4f7fc 100%)' }}
+      ref={ref}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-surface-deepest"
     >
-      {glowActive ? (
-        GLOW_LAYERS.map((_, i) => (
-          <GlowLayer
-            key={i}
-            index={i}
-            targetRef={targetRef}
-            currentRef={currentRef}
-            active={glowActive}
-          />
-        ))
-      ) : (
-        <StaticGlow />
-      )}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(15,117,188,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(15,117,188,0.04) 1px, transparent 1px)',
+          backgroundSize: '60px 60px',
+          maskImage: 'radial-gradient(ellipse 80% 60% at 50% 40%, black 40%, transparent 70%)',
+        }}
+      />
+
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/3 -left-32 w-[600px] h-[600px] rounded-full bg-brand-blue/5 blur-[120px]" />
+        <div className="absolute bottom-1/4 -right-32 w-[500px] h-[500px] rounded-full bg-brand-orange/4 blur-[100px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-brand-navy/10 blur-[80px]" />
+      </div>
 
       <Particles
         className="absolute inset-0"
-        quantity={40}
-        staticity={40}
-        ease={60}
-        size={0.5}
-        color="#0B72FF"
+        quantity={50}
+        staticity={50}
+        ease={50}
+        size={0.4}
+        color="#0F75BC"
         vx={0.05}
         vy={0.05}
       />
 
-      <HeroContent />
+      <div className="relative z-10 text-center max-w-5xl px-6 py-32">
+        <motion.div {...fadeUp(0)} className="mb-6">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/[0.08] bg-white/[0.02] text-xs text-text-secondary">
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-orange animate-pulse" />
+            India &amp; APAC communications
+          </span>
+        </motion.div>
+
+        <motion.h1
+          {...fadeUp(0.15)}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight mb-8"
+        >
+          Reputation, creators <br />
+          and communication that{' '}
+          <span className="text-gradient">
+            stand up to real‑world scrutiny.
+          </span>
+        </motion.h1>
+
+        <motion.p
+          {...fadeUp(0.3)}
+          className="text-lg md:text-xl text-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed"
+        >
+          Global communications and creator‑led growth — built in India &amp; APAC
+          for reputation, crisis, and scale across languages and platforms.
+        </motion.p>
+
+        <motion.div
+          {...fadeUp(0.5)}
+          className="flex flex-col sm:flex-row items-center gap-4 justify-center mb-16"
+        >
+          <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white rounded-xl shadow-glow-orange transition-shadow duration-base hover:shadow-glow-lg"
+              style={{ background: 'var(--gradient-brand)' }}
+            >
+              Start a conversation
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </Link>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+            <Link
+              href="/services"
+              className="px-8 py-4 text-base font-semibold text-white/80 rounded-xl border border-white/[0.12] hover:bg-white/[0.04] hover:text-white hover:border-white/[0.2] transition-all duration-base"
+            >
+              Explore services
+            </Link>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.8 }}
+          className="flex flex-col items-center gap-5"
+        >
+          <p className="text-xs text-text-muted uppercase tracking-[0.2em] font-medium">
+            Trusted by
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+            {TRUSTED_BRANDS.map(({ name, logo }) => (
+              <Image
+                key={name}
+                src={logo}
+                alt={name}
+                width={100}
+                height={28}
+                className="opacity-30 hover:opacity-60 transition-all duration-base brightness-0 invert"
+                style={{ objectFit: 'contain', height: 24 }}
+              />
+            ))}
+          </div>
+        </motion.div>
+      </div>
     </section>
   )
 }

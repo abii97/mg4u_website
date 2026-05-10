@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 import { BlurFade } from '@/components/ui/blur-fade'
 
 const logos = [
@@ -9,26 +10,39 @@ const logos = [
   { name: 'Just Herbs', src: '/logos/just-herbs.svg' },
 ]
 
+const stats = [
+  { value: '100+', label: 'Campaigns delivered' },
+  { value: '12+', label: 'Languages & regions' },
+  { value: '50+', label: 'Creator partnerships' },
+  { value: '90%', label: 'Client retention' },
+]
+
 export default function TrustedBySection() {
   return (
-    <section className="bg-surface-base py-section-y px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative bg-surface-deepest py-section-y px-6" id="trust">
+      <div className="max-w-7xl mx-auto">
         <BlurFade delay={0.1}>
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold mb-4 text-text-primary">Trusted where there&rsquo;s no room for error</h2>
-            <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
-              We work with organisations that carry public trust, regulatory scrutiny and community
-              expectations—alongside ambitious new-age brands rewriting their categories.
+          <div className="text-center mb-16">
+            <span className="text-xs text-brand-orange uppercase tracking-[0.2em] font-semibold mb-4 block">
+              Trust
+            </span>
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-5 text-white tracking-tight">
+              Trusted where there&rsquo;s{' '}
+              <span className="text-gradient">no room for error.</span>
+            </h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
+              Organisations that carry public trust, regulatory scrutiny and community
+              expectations — alongside ambitious brands rewriting their categories.
             </p>
           </div>
         </BlurFade>
 
         <BlurFade delay={0.2}>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 mb-16">
-            {logos.map(({ name, src }, i) => (
+          <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16 mb-16">
+            {logos.map(({ name, src }) => (
               <div
                 key={name}
-                className="grayscale opacity-40 hover:opacity-70 hover:grayscale-0 transition-all duration-base"
+                className="group grayscale opacity-20 hover:opacity-60 hover:grayscale-0 transition-all duration-base brightness-0 invert"
               >
                 <Image
                   src={src}
@@ -42,9 +56,20 @@ export default function TrustedBySection() {
           </div>
         </BlurFade>
 
-        <BlurFade delay={0.4}>
+        <BlurFade delay={0.35}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            {stats.map(({ value, label }, i) => (
+              <div key={label} className="text-center p-6 rounded-xl border border-white/[0.06] bg-surface-elevated/30">
+                <div className="text-3xl md:text-4xl font-extrabold text-brand-blue mb-1">{value}</div>
+                <div className="text-xs text-text-muted uppercase tracking-wider">{label}</div>
+              </div>
+            ))}
+          </div>
+        </BlurFade>
+
+        <BlurFade delay={0.45}>
           <p className="text-center text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed italic">
-            If your work is too important to be reduced to &ldquo;just another campaign&rdquo;, we should talk.
+            &ldquo;If your work is too important to be reduced to just another campaign, we should talk.&rdquo;
           </p>
         </BlurFade>
       </div>
