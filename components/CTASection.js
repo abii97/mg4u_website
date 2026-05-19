@@ -7,8 +7,7 @@ export default function CTASection() {
   return (
     <section className="relative overflow-hidden py-32 px-6 text-center" style={{ background: 'var(--surface-deepest)' }}>
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-blue/5 blur-[150px]" />
-        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full bg-brand-orange/4 blur-[100px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-brand-blue/5 blur-[80px]" />
       </div>
 
       <Particles
@@ -31,7 +30,7 @@ export default function CTASection() {
       >
         <h2 className="text-4xl md:text-6xl font-extrabold mb-6 text-white tracking-tight leading-[1.1]">
           Ready to{' '}
-          <span className="text-gradient">engineer influence</span>
+          <span className="text-gradient font-extrabold">engineer influence</span>
           {' '}that converts?
         </h2>
         <p className="text-lg text-text-secondary mb-10 max-w-xl mx-auto leading-relaxed">
@@ -45,7 +44,7 @@ export default function CTASection() {
               style={{ background: 'var(--gradient-brand)' }}
             >
               Start a conversation
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </Link>
           </motion.div>
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>

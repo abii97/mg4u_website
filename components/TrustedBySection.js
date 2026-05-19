@@ -23,12 +23,9 @@ export default function TrustedBySection() {
       <div className="max-w-7xl mx-auto">
         <BlurFade delay={0.1}>
           <div className="text-center mb-16">
-            <span className="text-xs text-brand-orange uppercase tracking-[0.2em] font-semibold mb-4 block">
-              Trust
-            </span>
             <h2 className="text-3xl md:text-5xl font-extrabold mb-5 text-white tracking-tight">
               Trusted where there&rsquo;s{' '}
-              <span className="text-gradient">no room for error.</span>
+              <span className="text-gradient font-extrabold">no room for error.</span>
             </h2>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
               Organisations that carry public trust, regulatory scrutiny and community

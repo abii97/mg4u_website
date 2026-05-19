@@ -55,7 +55,7 @@ export default function Navbar() {
             <li key={href}>
               <Link
                 href={href}
-                className="px-4 py-2 text-sm text-text-secondary hover:text-white transition-colors duration-fast rounded-lg hover:bg-white/[0.04]"
+                className="px-4 py-3 text-sm text-text-secondary hover:text-white transition-colors duration-fast rounded-lg hover:bg-white/[0.04]"
               >
                 {label}
               </Link>
@@ -82,15 +82,15 @@ export default function Navbar() {
         </div>
 
         <button
-          className="md:hidden p-2 text-white/80 hover:text-white transition-colors"
+          className="md:hidden p-3 text-white/80 hover:text-white transition-colors"
           onClick={() => setOpen(!open)}
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
         >
           {open ? (
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12" /></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" /></svg>
           ) : (
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
           )}
         </button>
       </div>

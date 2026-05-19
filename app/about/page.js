@@ -28,13 +28,12 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-surface-deepest">
       <section className="relative py-section-y px-6 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-brand-blue/5 blur-[120px]" />
-        </div>
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-brand-blue/5 blur-[80px]" />
+          </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
           <BlurFade delay={0.1}>
-            <span className="text-xs text-brand-orange uppercase tracking-[0.2em] font-semibold mb-4 block text-center">About</span>
             <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-6 text-white tracking-tight">We engineer influence that converts</h1>
           </BlurFade>
           <BlurFade delay={0.2}>

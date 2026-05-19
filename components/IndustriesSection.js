@@ -17,12 +17,9 @@ export default function IndustriesSection() {
       <div className="max-w-7xl mx-auto">
         <BlurFade delay={0.1}>
           <div className="text-center mb-16">
-            <span className="text-xs text-brand-orange uppercase tracking-[0.2em] font-semibold mb-4 block">
-              Industries
-            </span>
             <h2 className="text-3xl md:text-5xl font-extrabold mb-5 text-white tracking-tight">
               Partners in{' '}
-              <span className="text-gradient">mission‑critical sectors.</span>
+              <span className="text-gradient font-extrabold">mission‑critical sectors.</span>
             </h2>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
               We specialise where trust, compliance and speed matter as much as reach.
@@ -54,7 +51,7 @@ export default function IndustriesSection() {
               className="inline-flex items-center gap-2 text-sm text-brand-orange hover:text-[#e08515] transition-colors duration-fast font-medium group"
             >
               Learn about our industry expertise
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </Link>
           </div>
         </BlurFade>

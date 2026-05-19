@@ -36,12 +36,9 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto">
         <BlurFade delay={0.1}>
           <div className="text-center mb-16">
-            <span className="text-xs text-brand-orange uppercase tracking-[0.2em] font-semibold mb-4 block">
-              What we do
-            </span>
             <h2 className="text-3xl md:text-5xl font-extrabold mb-5 text-white tracking-tight">
               Four pillars for a world where{' '}
-              <span className="text-gradient">one post can move markets.</span>
+              <span className="text-gradient font-extrabold">one post can move markets.</span>
             </h2>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
               Communication that is fast, credible and built for scrutiny.
@@ -55,12 +52,11 @@ export default function ServicesSection() {
               <motion.div
                 whileHover={{ y: -2, scale: 1.01 }}
                 className="group relative overflow-hidden bg-surface-elevated/60 backdrop-blur-sm border border-white/[0.06] rounded-xl p-6 md:p-8 flex gap-5 transition-all duration-base cursor-default"
-                style={{ '--pillar-color': color }}
               >
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-base pointer-events-none"
                   style={{
-                    background: `radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), ${color}0D, transparent 40%)`,
+                    background: `radial-gradient(600px circle at 50% 50%, ${color}0D, transparent 40%)`,
                   }}
                 />
                 <div
@@ -74,7 +70,7 @@ export default function ServicesSection() {
                   {num}
                 </div>
                 <div className="flex flex-col gap-2 relative z-10">
-                  <h3 className="text-xl font-bold text-white group-hover:text-[var(--pillar-color)] transition-colors duration-base">
+                  <h3 className="text-xl font-bold text-white group-hover:text-brand-orange transition-colors duration-base">
                     {title}
                   </h3>
                   <p className="text-sm text-text-secondary leading-relaxed">{desc}</p>
@@ -91,7 +87,7 @@ export default function ServicesSection() {
               className="inline-flex items-center gap-2 text-sm text-brand-orange hover:text-[#e08515] transition-colors duration-fast font-medium group"
             >
               Explore all services
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </Link>
           </div>
         </BlurFade>

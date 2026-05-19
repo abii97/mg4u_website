@@ -36,9 +36,8 @@ export default function Hero() {
       />
 
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 -left-32 w-[600px] h-[600px] rounded-full bg-brand-blue/5 blur-[120px]" />
-        <div className="absolute bottom-1/4 -right-32 w-[500px] h-[500px] rounded-full bg-brand-orange/4 blur-[100px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-brand-navy/10 blur-[80px]" />
+        <div className="absolute top-1/3 -left-32 w-[500px] h-[500px] rounded-full bg-brand-blue/5 blur-[80px]" />
+        <div className="absolute bottom-1/4 -right-32 w-[400px] h-[400px] rounded-full bg-brand-orange/4 blur-[60px]" />
       </div>
 
       <Particles
@@ -66,7 +65,7 @@ export default function Hero() {
         >
           Reputation, creators <br />
           and communication that{' '}
-          <span className="text-gradient">
+          <span className="text-gradient font-extrabold">
             stand up to real‑world scrutiny.
           </span>
         </motion.h1>
@@ -90,7 +89,7 @@ export default function Hero() {
               style={{ background: 'var(--gradient-brand)' }}
             >
               Start a conversation
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </Link>
           </motion.div>
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
@@ -119,9 +118,9 @@ export default function Hero() {
                 src={logo}
                 alt={name}
                 width={100}
-                height={28}
+                height={24}
                 className="opacity-30 hover:opacity-60 transition-all duration-base brightness-0 invert"
-                style={{ objectFit: 'contain', height: 24 }}
+                style={{ objectFit: 'contain' }}
               />
             ))}
           </div>

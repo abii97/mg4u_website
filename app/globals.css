@@ -51,7 +51,7 @@
     --surface-elevated: #132A55;
     --text-primary: #FFFFFF;
     --text-secondary: rgba(255, 255, 255, 0.70);
-    --text-muted: rgba(255, 255, 255, 0.45);
+    --text-muted: rgba(255, 255, 255, 0.60);
     --border-subtle: rgba(255, 255, 255, 0.08);
     --border-default: rgba(255, 255, 255, 0.12);
     --gradient-brand: linear-gradient(135deg, #0F75BC, #F7941D);
@@ -116,16 +116,10 @@
 
 @layer utilities {
   .text-gradient {
-    background: var(--gradient-hero);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--brand-orange);
   }
   .text-gradient-blue {
-    background: linear-gradient(135deg, #0F75BC, #7C3AED);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--brand-blue);
   }
   .bg-gradient-brand {
     background: var(--gradient-brand);

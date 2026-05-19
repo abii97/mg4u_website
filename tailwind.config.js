@@ -66,7 +66,7 @@ module.exports = {
         text: {
           primary: '#FFFFFF',
           secondary: 'rgba(255, 255, 255, 0.70)',
-          muted: 'rgba(255, 255, 255, 0.45)',
+          muted: 'rgba(255, 255, 255, 0.60)',
           inverse: '#0A1530',
         },
       },

@@ -55,7 +55,6 @@ export default function CaseStudiesPage() {
     <div className="min-h-screen bg-surface-deepest py-section-y px-6">
       <div className="max-w-7xl mx-auto">
         <BlurFade delay={0.1}>
-          <span className="text-xs text-brand-orange uppercase tracking-[0.2em] font-semibold mb-4 block text-center">Case Studies</span>
           <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-white tracking-tight">Where it really mattered</h1>
         </BlurFade>
         <BlurFade delay={0.2}>
